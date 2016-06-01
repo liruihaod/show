@@ -310,8 +310,9 @@ body,html{
 /*-----------遥控器部分---------------*/
 
 .control_wrapper{
+	margin-top:2.4rem;
 	width: 12rem;
-	height: 27.5rem;
+	height: 25rem;
 	background: #fcd445;
 	border: 0.7rem solid #040000;
 	border-radius: 1.5rem;
@@ -338,10 +339,16 @@ body,html{
 }
 
 .control_ul{
-	width: 9rem;
-	height: 7rem;
-	overflow: hidden;
-	margin: 0 auto;
+	width:5rem;
+	right:-2rem;
+	float:left;
+	margin-top:2rem;
+	margin-left:-0.6rem;
+}
+.control_ul li{
+	width:100%;
+	float:left;
+	margin-bottom:1rem;
 }
 /*个人介绍*/
 .control_cats{
@@ -372,10 +379,40 @@ body,html{
 	background: #ec6b46;
 }
 
+.line-a{
+	content:"";
+	width:7rem;
+	height:0.1rem;
+	background:red;
+	position: absolute;
+	left:48.5rem;
+	top:7rem;
+	-webkit-transform: rotate(-53deg);
+	-ms-transform: rotate(-53deg);
+	-o-transform: rotate(-53deg);
+	transform: rotate(-53deg);
+	background:#FCD445;
+	z-index: -1;
+}
+.line-b{
+	content:"";
+	width:7rem;
+	height:0.1rem;
+	background:red;
+	position: absolute;
+	left:52.1rem;
+	top:7.5rem;
+	-webkit-transform: rotate(35deg);
+	-ms-transform: rotate(35deg);
+	-o-transform: rotate(35deg);
+	transform: rotate(35deg);
+	background:#FCD445;
+	z-index: -1;
+}
 .control_view{
 	width: 8rem;
 	height: 4rem;
-	margin: 0 auto;
+	margin: 2rem auto;
 	border: 0.15rem dashed #040000;
 	border-radius: 0.3rem;
 	background: #fff;
@@ -575,6 +612,7 @@ body,html{
 }
 .contact>h3>p{
 	transition: all 0.8s ease-out;
+	cursor: pointer;
 }
 .contact>h3:hover p{
 	transform:translateY(-1.7rem);
@@ -597,15 +635,72 @@ body,html{
 	position: relative;
 }
 .works{
+	height:5rem;
 	margin: 0 auto;
 	cursor: pointer;
+	line-height: 5rem;
+	position: relative;
 }
+.works_li{
+	width:100%;
+	height:100%;
+	padding-left:1.5rem;
+}
+
+.works_li li{
+	float:left;
+	animation:works_loading 1.0s infinite ease-in-out;
+}
+.works_li li:nth-child(1){
+	animation-delay:0.1s;
+}
+.works_li li:nth-child(2){
+	animation-delay:0.2s;
+}
+.works_li li:nth-child(3){
+	animation-delay:0.3s;
+}
+.works_li li:nth-child(4){
+	animation-delay:0.4s;
+}
+.works_li li:nth-child(5){
+	animation-delay:0.5s;
+}
+.works_li li:nth-child(6){
+	animation-delay:0.6s;
+}
+
+@keyframes works_loading{
+  0%,40%,100%,{transform:scaleY(1);}
+  20%{transform:scaleY(2);}
+ }
+.works_move{
+	-webkit-transform: translateY(5rem);
+	-ms-transform: translateY(5rem);
+	-o-transform: translateY(5rem);
+	transform: translateY(5rem);
+}
+.works .works_gif{
+	height:100%;
+	width:100%;
+	background:url(../img/show1.gif) no-repeat;
+	background-size:cover;
+	position: absolute;
+	left:0;
+	top:0;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	z-index: -1;
+}
+
+
 .works .fa-arrow-left{
 	position: absolute;
 	display: block;
 	color:red;
 	left:6.5rem;
-	top:0.4rem;
+	top:2.1rem;
 	animation: key_left 2s infinite;
 }
 @keyframes key_left{
@@ -2568,16 +2663,19 @@ body,html{
 		}
 
 		.modal_btn{
-			padding:10px 20px;
+			width:6rem;
+			height:2rem;
 			border:1px solid #03A9F4;
 			border-radius: 10px;
 			box-shadow: 0 0 5px #096189;
 			background:#0EE4FF;
 			color:white;
+			line-height: 2rem;
 			cursor: pointer;
 			position: absolute;
 			bottom:15px;
-			transform: translateX(-50%);
+			left:50%;
+			margin-left:-3rem;
 			font-weight: bold;
 		}
 

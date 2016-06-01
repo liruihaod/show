@@ -84,23 +84,14 @@ var $control_cats = $('.control_cats'),
         $arrow_show=$(".arrow_show"),
         $close_box=$(".close_box"),
 		$modal_btn=$(".modal_btn"),
-	$modal_wrap=$(".modal"),
+		$works_gif=$(".works_gif"),
+		$works_li=$(".works li"),
+		$modal_wrap=$(".modal"),
         $show_num=0,//设置初始值为0；
         $show_key=false,//设置状态锁，放置多次点击
         $imgWidth=$workl_show_ct.find("img").width(),//获取图片宽度
         $imgNum=$workl_show_ct.children().size();//获取图片的数量
 
-	// 电视垂直居中
-	function tvMiddle(){
-		var v_height = $('.tv_wrapper').height();
-		var w_height = $(window).height();
-		var padding_top_num = (w_height - v_height)/2 ;
-
-		var padding_top = "padding-top:" + padding_top_num + "px";
-		$container.attr('style',padding_top);
-
-	}
-	tvMiddle();
 
 	//照片部分
     function rotate(){
@@ -256,6 +247,7 @@ var $control_cats = $('.control_cats'),
 
 	// 点击“更多作品展示”按钮
 	$works.click(function(){
+		$works_gif.css("z-index",1);//打开gif图片
 		var data_status = $tv_btn.data('status');
 		if (data_status == "on") {//判断电视是否打开
 
@@ -287,6 +279,8 @@ var $control_cats = $('.control_cats'),
 		}
 	});
 
+	//鼠标放在作品展示
+		
 	// 点击“回看电视”按钮
 	$back_btn.click(function(){
 		// $work_header.removeClass('work_header_now');
@@ -305,6 +299,7 @@ var $control_cats = $('.control_cats'),
 		},2400);
 		setTimeout(function(){
 			$tv_hand.removeClass('tv_hand_move');//移除手部动作
+			$works_gif.css("z-index",-1);
 		},2700);
 	});
 
@@ -744,4 +739,5 @@ creat("为了联盟");
     $(".photo_outer").addClass('remove')
     console.log("hello,我是李瑞,现在正在寻找一份前端工作")
     console.log("本页面js代码已用requirejs打包,关于细节部分说明已在博客贴出")
+    console.log("未做IE兼容(页面太多CSS3,基本上也就告别IE8了)")
 
