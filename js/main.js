@@ -73,7 +73,6 @@ var $control_cats = $('.control_cats'),
 		$a_2_img_img = $('.a_2_img_img'),
 		$a_4_img_cry = $('.a_4_img_cry'),
 		$a_4_img_flash = $('.a_4_img_flash'),
-		$tv_ps = $('.tv_ps'),
 		$control_view = $('.control_view');
         $fa_key=$(".fa-key"),
         $workl_show_ct = $(".workl_show_ct"),
@@ -141,15 +140,12 @@ var $control_cats = $('.control_cats'),
 		setTimeout(function(){
             $my_skill_row_div.removeClass('my_skill_move');
 			$my_intern_cont.removeClass('my_intern_cont_move');
-			$my_exp_box.eq(0).removeClass('my_exp_box_1_move');
-			$my_exp_box.eq(1).removeClass('my_exp_box_2_move');
-			$my_exp_box.eq(2).removeClass('my_exp_box_3_move');
             $my_exp_div.removeClass("my_skill_move");
 		},100);
 	}
 
 	// 遥控器上点击不同资料按钮，电视内容切换
-	$control_cats.click(function(){
+	$control_cats.on("click",function(){
 		var data_status = $tv_btn.data('status');
 		if (data_status == "on") {
 			$control_cats.removeClass('cats_active').addClass('cats_negative');
@@ -161,11 +157,6 @@ var $control_cats = $('.control_cats'),
 		},0)
 			// 点击个人资料
 			if (cats_index == 0) {
-				var my_pic_hover = $my_pic.attr('data-status');
-				if (my_pic_hover != "hover") {
-					hoverMe();
-                }
-                $my_intern.removeClass('my_intern_move');
 				$my_photo.removeClass('my_photo_move');
 				$my_name_box.removeClass('my_name_box_move');
 				$tap_1.removeClass('tap_1_move');
@@ -177,7 +168,6 @@ var $control_cats = $('.control_cats'),
 			}
 			// 点击技能树
 			else if(cats_index == 1){
-
 				tvContChange();
 				fileLeft();
 				$my_skill.show();
@@ -207,9 +197,6 @@ var $control_cats = $('.control_cats'),
                 },200);
 			}
 		}
-		else{
-			$tv_ps.addClass('tv_ps_move');
-		}
 
 	});
 
@@ -225,7 +212,6 @@ var $control_cats = $('.control_cats'),
 			},100);
 		}
 		else if(data_status == "off"){
-			$tv_ps.removeClass('tv_ps_move');
             $tv_blank_up.removeClass('tv_blank_up_move').addClass('tv_blank_up');
             $tv_blank_down.removeClass('tv_blank_down_move').addClass("tv_blank_down");
 			$tv_btn.data('status','on');
@@ -240,10 +226,6 @@ var $control_cats = $('.control_cats'),
 		tv_on_toggle();
 	});
 
-	// 点击遥控器上的开关
-	$control_btn.click(function(){
-		tv_on_toggle();
-	});
 
 	// 点击“更多作品展示”按钮
 	$works.click(function(){
@@ -309,20 +291,26 @@ var $control_cats = $('.control_cats'),
         $a_pre.show();
         $welcome_work_p.show();
 		var time = new Date().getHours();
-		if (time > 7 && time < 12){
-			$welcome_work_p.text('早上吃的啥,面试官');
+		if (time >0 && time <= 2){
+			$welcome_work_p.text('夜深了,明天不用上班了吗');
 		}
-		else if (time >= 12 && time <14){
-			$welcome_work_p.text('中午吃的啥?面试官');
+		else if (time >2 && time <=5){
+			$welcome_work_p.text('熬夜可要注意身体……');
 		}
-		else if (time >= 14 && time < 19){
-			$welcome_work_p.text('亲爱的面试官，下午好');
+		else if (time >6 && time <=9){
+			$welcome_work_p.text('早上好啊,早饭吃了吗？');
 		}
-		else if (time >= 19 && time < 24){
-			$welcome_work_p.text('亲爱的面试官，晚上好！');
+		else if (time >9 && time <=11){
+			$welcome_work_p.text('上午好,今天天气怎么样？');
+		}
+		else if (time >11 && time <= 14){
+			$welcome_work_p.text('中午打算吃啥？面试官');
+		}
+		else if (time >14 && time <=18){
+			$welcome_work_p.text('中午午休了么？面试官');
 		}
 		else {
-			$welcome_work_p.text('才加完班？,注意身体啊，面试官');
+			$welcome_work_p.text('下班回家了么？面试官');
 		}
 		setTimeout(function(){
 			$welcome_work_p.addClass('welcome_work_p_move');
@@ -381,6 +369,7 @@ var $control_cats = $('.control_cats'),
             $q_list_cont.hide();
             $a_pre.removeClass('a_pre_move');
             $view_off.removeClass('fa-key_move');
+            $my_pic_work.removeClass('my_pic_work_move')
             qListMoveOut();
             $fa_key.removeClass("fa-toggle-off").addClass("fa-toggle-on");
         },500)
@@ -671,12 +660,7 @@ creat("为了联盟");
 			$gototop_arrow.hide();
 			$gototop_bow.hide();
 			$gototop_p.hide();
-			setTimeout(function(){
-				$gototop_on_arrow.removeClass('arrow_move');
-				$gototop_arrow.show();
-				$gototop_bow.show();
-				$gototop_p.show();
-			},1400);
+		
 		});
 
 		$(window).on("scroll",function(){
@@ -722,7 +706,6 @@ creat("为了联盟");
                     $myskill_browser.removeClass("myskill_browser_move")
                     $myskill_editor.removeClass("myskill_editor_move")
 
-
             };
             if($myskill_box1.width()<30){
                 $myskill_box1.children().hide();
@@ -739,5 +722,5 @@ creat("为了联盟");
     $(".photo_outer").addClass('remove')
     console.log("hello,我是李瑞,现在正在寻找一份前端工作")
     console.log("本页面js代码已用requirejs打包,关于细节部分说明已在博客贴出")
-    console.log("未做IE兼容(页面太多CSS3,基本上也就告别IE8了)")
+    console.log("未做IE兼容")
 

@@ -17,7 +17,9 @@ body,html{
 	font-family:"Microsoft Yahei";
 	font-size: 16px;
 }
-
+img{
+	border:none;
+}
 .body_move{
 	background: #12585D;
 }
@@ -671,8 +673,8 @@ body,html{
 }
 
 @keyframes works_loading{
-  0%,40%,100%,{transform:scaleY(1);}
-  20%{transform:scaleY(2);}
+  0%,100%,{transform:scaleY(1)}
+  20%{transform:scaleY(2)}
  }
 .works_move{
 	-webkit-transform: translateY(5rem);
@@ -1575,7 +1577,7 @@ body,html{
 }
 
 .q_list_3{
-	width: 16rem;
+	width: 8rem;
 	z-index: 418;
 }
 
@@ -2555,11 +2557,11 @@ body,html{
 	background-size:cover;
 }
 .gototop:hover>.arrow{
-	-webkit-transform:translateY(-1rem) rotate(90deg) ;
-	-moz-transform:translateY(-1rem) rotate(90deg);
-	-ms-transform:translateY(-1rem) rotate(90deg);
-	-o-transform:translateY(-1rem) rotate(90deg);
-	transform:translateY(-1rem) rotate(90deg);
+	-webkit-transform: rotate(90deg) translateX(-1rem) ;
+	-moz-transform: rotate(90deg) translateX(-1rem);
+	-ms-transform: rotate(90deg) translateX(-1rem);
+	-o-transform: rotate(90deg) translateX(-1rem);
+	transform: rotate(90deg) translateX(-1rem);
 }
 .gototop_on{
 	width: 4rem;
