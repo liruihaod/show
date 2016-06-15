@@ -109,15 +109,6 @@ var $control_cats = $('.control_cats'),
     })
 
 
-    function hoverMe(){
-        $hover_me.show();
-        setTimeout(function(){
-            $hover_me.addClass('hover_me_move');
-        },500);
-    }
-    hoverMe();
-
-
 	// 把个人资料移到左侧
 	function fileLeft(){
 
@@ -656,10 +647,10 @@ creat("为了联盟");
 			$gototop_on.show();
 			$('body').animate({scrollTop:0},400);
 			$gototop_on_arrow.addClass('arrow_move');
-			$gototop_on.fadeOut(1000);
 			$gototop_arrow.hide();
 			$gototop_bow.hide();
-			$gototop_p.hide();
+			$gototop_on_arrow.hide();
+			$gototop_on.fadeOut(1000);
 		
 		});
 
@@ -712,9 +703,9 @@ creat("为了联盟");
             }
 			// 滚动超过一定距离时，让goTop出现
             if(cur_h>min_height){
-                $gototop.fadeIn(1000)
+                $gototop.fadeIn(800);
             }else if(cur_h<min_height){
-                $gototop.fadeOut(1000)
+                $gototop.fadeOut(800)
             }
 		});
     }
