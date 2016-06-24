@@ -3,12 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="js/app/4.2.0/css/font-awesome.min.css">
-	<style>
-		input::-webkit-search-cancel-button {
-		display: none;
-				}
-	</style>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -16,10 +11,10 @@
 		<!-- 页眉开始 -->
 		<header>
 			<!-- 页眉搜索栏开始 -->
-			<div class="header_search">
+			<div class="header_search clearfix">
 				<form action="" id="search_form">
-					<input type="search" placeholder="找找自己任职过的公司">
-					<i class="fa fa-search"></i>
+					<input  class="header_input_search"type="search" placeholder="找找自己任职过的公司">
+					<button type="submit" class="header_search_icon"></button>
 				</form>
 			</div>
 			<!-- 页眉搜索栏结束 -->
@@ -30,11 +25,11 @@
 			<!-- 公司展示开始 -->
 			<ul class="company_list">
 				<li>
-					<div class="company_list_header">
+					<div class="company_list_header clearfix">
 						<div class="company_list_left"></div>
 						<div class="company_list_right">
-							<h3>武汉环球宇宙科技有限公司</h2>
-							<h4>这家公司能不能去</h3>
+							<h3>武汉环球宇宙科技有限公司</h3>
+							<h5>这家公司能不能去?</h5>
 						</div>
 					</div>
 					<div class="compan_list_main">
@@ -45,71 +40,77 @@
 							</div>
 						</div>
 						<div class="compan_list_oppose">
-							<span class="compan_list_applaud">12312313</span><span>人赞同</span>
+							<span class="compan_list_applaud">12321</span><span>人赞同</span>
 							<div class="compan_list_content">
 								<span>不能去</span>
 							</div>
 						</div>
 					</div>
-					<div class="compan_list_footer">
-						<i></i><span class="compan_list_applaud">123213213</span><span>点评</span>
-					</div>
+					<a href="#" class="compan_list_footer clearfix">
+						<span class="compan_list_applaud">124350</span><span>点评</span>
+						<i class="compan_list_icon"></i>
+					</a>
 				</li>
 				<li>
-					<div class="company_list_header">
+					<div class="company_list_header clearfix">
 						<div class="company_list_left"></div>
 						<div class="company_list_right">
-							<h3>武汉环球宇宙科技有限公司</h2>
-							<h4>这家公司能不能去</h3>
+							<h3>武汉玩翻天科技有限公司</h3>
+							<h5>这家公司能不能去?</h5>
 						</div>
 					</div>
 					<div class="compan_list_main">
 						<div class="compan_list_agree">
-							<span class="compan_list_applaud">123</span><span>人赞同</span>
+							<span class="compan_list_applaud">1213454</span><span>人赞同</span>
 							<div class="compan_list_content">
 								<span>可以去</span>
 							</div>
 						</div>
 						<div class="compan_list_oppose">
-							<span class="compan_list_applaud">12312313</span><span>人赞同</span>
+							<span class="compan_list_applaud">121</span><span>人赞同</span>
 							<div class="compan_list_content">
 								<span>不能去</span>
 							</div>
 						</div>
 					</div>
-					<div class="compan_list_footer">
-						<i></i><span class="compan_list_applaud">123213213</span><span>点评</span>
-					</div>
+					<a href="#" class="compan_list_footer clearfix">
+						<span class="compan_list_applaud">124350</span><span>点评</span>
+						<i class="compan_list_icon"></i>
+					</a>
 				</li>
 				<li>
-					<div class="company_list_header">
+					<div class="company_list_header clearfix">
 						<div class="company_list_left"></div>
 						<div class="company_list_right">
-							<h3>武汉环球宇宙科技有限公司</h2>
-							<h4>这家公司能不能去</h3>
+							<h3>武汉得意家科技有限公司</h3>
+							<h5>这家公司能不能去？</h5>
 						</div>
 					</div>
 					<div class="compan_list_main">
 						<div class="compan_list_agree">
-							<span class="compan_list_applaud">123</span><span>人赞同</span>
+							<span class="compan_list_applaud">1213454</span><span>人赞同</span>
 							<div class="compan_list_content">
 								<span>可以去</span>
 							</div>
 						</div>
 						<div class="compan_list_oppose">
-							<span class="compan_list_applaud">12312313</span><span>人赞同</span>
+							<span class="compan_list_applaud">121</span><span>人赞同</span>
 							<div class="compan_list_content">
 								<span>不能去</span>
 							</div>
 						</div>
 					</div>
-					<div class="compan_list_footer">
-						<i></i><span class="compan_list_applaud">123213213</span><span>点评</span>
-					</div>
+					<a href="#" class="compan_list_footer clearfix">
+						<span class="compan_list_applaud">124350</span><span>点评</span>
+						<i class="compan_list_icon"></i>
+					</a>
 				</li>
-			</ul>
+
+				</ul>
 			<!-- 公司展示结束 -->
 		</div>
 	</div>
 </body>
+<script src="js/index.js"></script>
+<script src="js/app/zepto.min.js"></script>
 </html>
