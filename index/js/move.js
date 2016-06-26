@@ -1,87 +1,68 @@
-!function(){
-    var width=document.documentElement.clientWidth;
-    var head=document.getElementsByTagName("head")[0];
-    var style=document.createElement("style");
-    style.innerHTML="html{font-size:"+width/10+"px;}";
-    head.appendChild(style);
 
-}()
-//添加一个模板
-function Dialog(){};   // 创建空函数
-Dialog.prototype={     // 设置函数原型
-    defaultOpts:{       //初期设定
-        title: '',
-        message: '',
-        isShowCloseBtn: true,
-        isShowConfirmBtn: false,
-        onClose: function(){},
-        onConfirm: function(){}
-    },
-    setOpts:function(opts){  // 处理输入参数
-        if(typeof opts === 'string'){
-            this.opts=$.extend({}, this.defaultOpts, {message:opts});
-        }else if(typeof opts === 'object'){
-            this.opts=$.extend({}, this.defaultOpts, opts);
-        }
-    },
-    open:function(opts){   // 函数open 打开dialog
-        this.setOpts(opts);  // 处理参数 创造html 设置部分按钮有无 绑定事件
-        this.createHtml();
-        this.setButton();
-        this.bindEvent();
-    },
-    createHtml:function(){   // 根据参数 创建html
-        var html='<div class="dialog" style="display:none">'
-            +'<div class="dialog-head">'
-            +'<h4>'+this.opts.title+'</h4>'
-            +'<span class="close">×</span>'
-            +'</div>'
-            +'<div class="dialog-con">'
-            +this.opts.message
-            +'</div>'
-            +'<div class="dialog-footer">'
-            +'<span class="close">取消</span>'
-            +'<span class="commit">确定</span>'
-            +'</div>'
-            +'</div>';
-        this.$dialog=$(html);
-        $('body').append(this.$dialog);
-    },
-    setButton:function(){     // 根据参数 设置部分按钮的有无
-        var _this=this;
-        if(this.opts.isShowCloseBtn){
-            _this.$dialog.find('.dialog-head .close').show();
-        }else{
-            _this.$dialog.find('dialog-head .close').hide();
-        };
-        if(this.opts.isShowConfirmBtn){
-            _this.$dialog.find('.dialog-head .cancel').show();
-        }else{
-            _this.$dialog.find('dialog-head .cancel').hide();
-        };
-        if(this.opts.title){
-            _this.$dialog.find('.dialog-head').show();
-        }else{
-            _this.$dialog.find('.dialog-head').hide();
-        };
-        _this.$dialog.show();
-    },
-    bindEvent:function(){       // 给按钮绑定事件
-        var $dialog=this.$dialog;
-        this.drag=false;
-        var _this=this;
-        $dialog.find('.close').on('click',function(){
-            _this.opts.onClose();
-            $dialog.hide();
-        });
-        $dialog.find('.commit').on('click',function(){
-            _this.opts.onConfirm();
-            $dialog.hide();
-        });
-    },
+// dialog模板
+function Dialog(firstTitle,firstQuestion,next,secondPlease,planA,planB,put){
+  this.firstTitle=firstTitle||"中国移动武汉分公司";
+  this.firstQuestion=firstQuestion||"总经理姓什么：";
+  this.next=next||"下一步";
+  this.secondPlease=secondPlease||"请选择";
+  this.planA=planA||"可以去";
+  this.planB=planB||"不能去";
+  this.put=put||"提交";
 }
+Dialog.prototype={
+  init:function(){
+    var htmls="",
+       $node,
+       _this=this;
+   htmls+='<div class="dialog">';
+   htmls+='<div class="dialog_blind"></div>';
+   htmls+='<div class="dialog_close"></div>';
+   htmls+='<div class="dialog_content">';
+   htmls+='<div class="dialog_first">';
+   htmls+='<div class="dialog_first_main">';
+   htmls+='<div class="dialog_head">';
+   htmls+='<div class="dialog_title">'+_this.firstTitle+'</div>';
+   htmls+='</div><div class="dialog_main">';
+   htmls+='<div class="dialog_question"><span>'+_this.firstQuestion+'</span></div>';
+   htmls+='<input type="text" placeholder="答对问题才可以参与" class="dialog_response">';
+   htmls+='</div><div class="dialog_footer clearfix">';
+   htmls+='<a href="javascript:void(0)">'+_this.next+'</a></div></div></div>';
+   htmls+='<div class="dialog_second" style="display:none;">';
+   htmls+='<div class="dialog_second_main" style="display:block;">';
+   htmls+='<div class="dialog_second_head clearfix">';
+   htmls+='<div class="dialog_second_left">'+_this.secondPlease+'</div>';
+   htmls+='<div class="dialog_second_right">';
+   htmls+='<a href="javascript:void(0)">'+_this.planA+'</a>';
+   htmls+='<a href="javascript:void(0)">'+_this.planB+'</a></div></div>';
+   htmls+=' <form action="" class="dialog_second_form" method="get">';
+   htmls+='<input type="text" placeholder="留点意见建议" class="form_text">';
+   htmls+='<button type="submit" class="dialog_second_put">'+_this.put+'</button>';
+   htmls+='</form></div></div></div></div>';
+   $node=$(htmls);
+   $("body").append($node);
+   console.log("我已经被添加到页面上去啦");
+  },
+  bind:function(){
+      var _this=this;
+      _this.init();
+      _this.close();
+  },
+  close:function(){
+    var _this=this;
+    $(".dialog_close").on("tap",function(){
+      $(".dialog").hide();
+    });
+  }
+};
 
-$(".participation").on('click',function(){
-    var dialog1 = new Dialog();
-    dialog1.open('hello,');
+var dialog=new Dialog();
+$(".participation").on("tap",function(){
+    var $key=$(this).attr("key");
+    if($key==="false"){
+         dialog.bind();
+        $(this).attr("key","true");
+    }else{
+      console.log("弹框已经添加,现在就召唤出来");
+      $(".dialog").show();
+    }
 });

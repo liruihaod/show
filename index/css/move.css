@@ -1,5 +1,5 @@
 /*----清除默认设置----*/
-body,html,ul,li,h3,h5{
+body,html,ul,li,h3,p,button,input{
     padding:0;
     margin:0;
     -webkit-box-sizing: border-box;
@@ -30,87 +30,118 @@ a{
     width:8.9rem;
     margin:0 auto;
 }
+
 /*返回导航*/
 #nav{
     font-size:.371rem;
     margin-top:1rem;
+    background:white;
 }
-#nav div span{
-    font-weight:bolder;
-    margin-right:.161rem;
+#nav .nav_return{
+    width:.540rem;
+    height:.540rem;
+    display: block;
+    background-image:url("../image/result.png");
+    background-size:2.492rem .71rem ;
+    background-position: -1.21rem 0px;
+    float:left;
+    margin-left:-0.35rem;
+}
+#nav a{
+   height:.548rem;
+   line-height: .548rem;
+    float:left;
 }
 /*上层页面开始*/
 .header{
     margin-bottom:0.806rem;
 }
+
+
+/*上层页面结束*/
+
+.interval{
+  height:.129rem;
+  background:#ccc;
+}
+/*公司列表*/
 .company_list li{
-    margin-top:.32rem;
+    margin-top:.322rem;
 }
 .company_list_header{
-    margin-top:0.56rem;
-    margin-bottom:1.05rem;
+    margin-top:0.565rem;
+    margin-bottom:1.048rem;
 }
 .company_list_left{
     width:.05rem;
-    height:1.24rem;
+    height:1.242rem;
     background:black;
     float:left;
 }
 .company_list_right{
-    height:1.24rem;
+    height:1.242rem;
     float:left;
     padding-left:.387rem;
 }
 .company_list_right h3{
-    font-size:.516rem;
-    margin-bottom:.2rem;
+    font-size:.5rem;
+    margin-top:-.1rem;
+    margin-bottom:.1rem;
 }
-.company_list_right h5{
+.company_list_right p{
     font-size:.371rem;
     font-weight: normal;
 }
-.compan_list_agree{
+/*公司列表中间部分*/
+.compan_list_main .compan_list_agree{
     margin-bottom:.927rem;
 }
-.compan_list_agree,.compan_list_oppose{
+.compan_list_main {
     font-size:0.242rem;
 }
+.compan_list_main .classify_more{
+  width:6.2rem;
+}
+.compan_list_main .classify_few{
+  width:1.815rem;
+}
+.conpan_list_number{
+  padding-right:.226rem;
+    text-align: right;
+}
 .compan_list_agree .compan_list_content{
-    width:6.742rem;
-    height:.290rem;
-    background:#09f;
-    margin-top:.129rem;
-    position: relative;
-    -webkit-border-radius:0.15rem;
-    -moz-border-radius:0.15rem;
-    border-radius:0.15rem;
-}
-.compan_list_agree .compan_list_content span{
-    position: absolute;
-    width:0.73rem;
-    right:-1.048rem;
-    top:0;
-    color:#09f;
-}
-.compan_list_oppose .compan_list_content span{
-    position: absolute;
-    width:0.73rem;
-    right:-1.048rem;
-    top:0;
-    color:red;
+  background:#0099ff;
 }
 .compan_list_oppose .compan_list_content{
-    width:1.806rem;
-    height:.290rem;
-    background:red;
-    margin-top:.129rem;
-    position: relative;
-    -webkit-border-radius:0.15rem;
-    -moz-border-radius:0.15rem;
-    border-radius:0.15rem;
+  background:#ff0000;
+}
+.compan_list_content{
+  position: relative;
+  height:.290rem;
+  margin-top:.129rem;
+  position: relative;
+  -webkit-border-radius:0.15rem;
+  -moz-border-radius:0.15rem;
+  border-radius:0.15rem;
+}
+.compan_list_content span{
+  display: block;
+  position: absolute;
+  right:-1.048rem;
+  height:.290rem;
+  line-height:.290rem;
+  top:0;
+  font-weight: 600;
+}
+.compan_list_agree .compan_list_content{
+  color:#0099ff;
+}
+.compan_list_oppose .compan_list_content{
+  color:#ff0000;
 }
 
-/*上层页面结束*/
+/*公司列表结束*/
+
 
 /*主体内容开始*/
 .content{
@@ -129,14 +160,14 @@ a{
 }
 .content_ct_left img{
     display: block;
-    width:.976rem;
-    height:.976rem;
+    width:1.4rem;
+    height:1.4rem;
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
     border-radius:50%;
 }
 .content_ct_left div{
-    width:.976rem;
+    width:1.4rem;
     font-size:0.210rem;
     text-align:center;
     margin-top:.202rem;
@@ -151,7 +182,7 @@ a{
     font-size:.355rem;
     margin-left:.689rem;
     padding:.323rem .266rem;
-    border:1px solid #c9c9c9;
+    border:.024rem solid #c9c9c9;
     -webkit-border-radius:.121rem;
     -moz-border-radius:.121rem;
     border-radius:.121rem;
@@ -161,26 +192,29 @@ a{
     max-width:6rem;
 }
 .content_ct_details:before{
-    content:"";
-    display: block;
-    width:0;
-    height:0;
-    border-bottom:.15rem solid transparent;
-    border-right:.3rem solid #c9c9c9;
-    position: absolute;
-    left:-.3rem;
-    top:-0.01rem;
+  content:"";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 .324rem .161rem 0;
+  border-color: transparent #c9c9c9 transparent transparent;
+  position: absolute;
+  left:-.324rem;
+  top:-.02rem;
+
 }
 .content_ct_details:after{
-    content:"";
-    display: block;
-    width:0;
-    height:0;
-    border-bottom:.15rem solid transparent;
-    border-right:.3rem solid white;
-    position: absolute;
-    left:-.26rem;
-    top:0;
+  content:"";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 .324rem .145rem 0;
+  border-color: transparent white transparent transparent;
+  position: absolute;
+  left:-.242rem;
+  top:0px;
 }
 .content_ct_username{
     color:#aaa;
@@ -192,37 +226,39 @@ a{
     width:100%;
     bottom:0;
     right:0;
-    height:1.242rem;
-    background:#f4f4f4
+    height:1.25rem;
+    background:#f4f4f4;
+    overflow: hidden;
 
 }
+
 .footer .tip{
-    float:left;
-    font-size:.210rem;
-    height:.903rem;
-    line-height:.903rem;
-    margin-left:0.596rem;
-    color:#aaa;
-    margin-top:0.2097rem;
+  transform: scale(0.8);
+  float:left;
+    font-size:.3rem;
+    height:1.25rem;
+    line-height:1.25rem;
+    margin-left:0.3rem;
+    color:#999;
 }
 .footer .participation{
-    float:right;
-    font-size:.355rem;
-    width:2.782rem;
-    text-align: center;
-    height:.903rem;
-    line-height:.903rem;
-    background:#ff6600;
-    -webkit-border-radius:.121rem;
-    -moz-border-radius:.121rem;
-    border-radius:.121rem;
-    margin-right:0.403rem;
-    margin-top:0.2097rem;
-    cursor: pointer;
+  float:right;
+  font-size:.355rem;
+  width:2.782rem;
+  text-align: center;
+  height:.903rem;
+  line-height:.903rem;
+  background:#ff6600;
+  -webkit-border-radius:.121rem;
+  -moz-border-radius:.121rem;
+  border-radius:.121rem;
+  margin:.210rem .435rem 0 -2.782rem;
 }
 .footer .participation a{
     color:white;
 }
+
+
 
 /*弹出框样式*/
 .dialog{
@@ -234,11 +270,17 @@ a{
     background:white;
 
 }
+.dialog_content{
+  width:6.2rem;
+}
 .dialog_first,.dialog_second{
     position: absolute;
     left:0;
     top:0;
     padding:0 .847rem 0 1.024rem;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
 }
 /*弹出框蒙层样式*/
 .dialog_blind{
@@ -253,17 +295,22 @@ a{
 
 /*关闭按钮样式*/
 .dialog_close{
-    width:0.75rem;
-    height:0.63rem;
-    background:url("../image/result.png") no-repeat;
-    background-position:0px -136px;
+    width:.655rem;
+    height:.655rem;
+    background:url(../image/result.png);
+    background-position:-1.831rem 0px;
+    background-size:2.492rem .71rem ;
     position: absolute;
     right:0;
-    top:-.823rem;
+    top:-.855rem;
+    cursor: pointer;
+}
+.dialog_close:focus{
+  outline:none;
 }
 /*弹出框第一步样式*/
 .dialog_first{
-    margin-top:.444rem;
+    padding-top:.444rem;
     background:#fff;
 }
 .dialog_first_main,.dialog_second_main{
@@ -278,7 +325,7 @@ a{
     font-size:.387rem;
 }
 .dialog_response{
-   width:6.2rem;
+     width:6.2rem;
     height:.952rem;
     border:1px solid #aaa;
     -webkit-border-radius:0.15rem;
@@ -292,7 +339,7 @@ a{
     outline:none;
 }
 .dialog_footer{
-    width:100%;
+    width:6.2rem;
 }
 .dialog_footer a{
     display: block;
@@ -307,6 +354,7 @@ a{
     border-radius:.121rem;
     float:right;
     color:white;
+    margin-bottom:.516rem;
 }
 /*第一页样式结束*/
 
@@ -384,3 +432,9 @@ a{
 .dialog_second_put:focus{
     outline:none;
 }
+.dialog_second_right  .active{
+  background:#0099ff;
+  color:white;
+  border:none;
+}
+/*弹出框样式结束*/

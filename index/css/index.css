@@ -1,5 +1,5 @@
 /*----清除默认设置----*/
-body,html,ul,li,h3,h5{
+body,html,ul,li,h3,p,button,input{
     padding:0;
     margin:0;
     -webkit-box-sizing: border-box;
@@ -51,113 +51,120 @@ input::-webkit-search-cancel-button {
     display: none;
 }
 .header_search .header_search_icon{
-    width:0.71rem;
-    height:0.71rem;
-    background:url("../image/result.png") no-repeat;
-    background-position: 0px 0px;
+    width:.494rem;
+    height:.71rem;
+    background-image:url("../image/result.png");
+    background-size:2.492rem .71rem ;
+    background-position:0rem 0rem;
     float:left;
     margin-left:0.35rem;
     cursor: pointer;
-    background-size:cover;
     border:none;
 }
+
 /*---页眉搜索栏结束---*/
 
 /*---内容页面开始---*/
+
 /*---公司展示页面---*/
 .company_list li{
-    margin-top:.32rem;
+    margin-top:.322rem;
 }
 .company_list_header{
-    margin-top:0.56rem;
-    margin-bottom:1.05rem;
+    margin-top:0.565rem;
+    margin-bottom:1.048rem;
 }
 .company_list_left{
     width:.05rem;
-    height:1.24rem;
+    height:1.242rem;
     background:black;
     float:left;
 }
 .company_list_right{
-    height:1.24rem;
+    height:1.242rem;
     float:left;
     padding-left:.387rem;
 }
 .company_list_right h3{
-    font-size:.516rem;
-    margin-bottom:.2rem;
+    font-size:.5rem;
+    margin-top:-.1rem;
+    margin-bottom:.1rem;
 }
-.company_list_right h5{
+.company_list_right p{
     font-size:.371rem;
     font-weight: normal;
 }
-
-.compan_list_agree{
+/*公司列表中间部分*/
+.compan_list_main .compan_list_agree{
     margin-bottom:.927rem;
 }
-.compan_list_agree,.compan_list_oppose{
+.compan_list_main {
     font-size:0.242rem;
 }
+.compan_list_main .classify_more{
+  width:6.2rem;
+}
+.compan_list_main .classify_few{
+  width:1.815rem;
+}
+.conpan_list_number{
+  padding-right:.226rem;
+    text-align: right;
+}
 .compan_list_agree .compan_list_content{
-    width:1.806rem;
-    height:.290rem;
-    background:#09f;
-    margin-top:.129rem;
-    position: relative;
-    -webkit-border-radius:0.15rem;
-    -moz-border-radius:0.15rem;
-    border-radius:0.15rem;
-}
-.company_list li:nth-of-type(2) .compan_list_agree .compan_list_content{
-    width:6.742rem;
-}
-.company_list li:nth-of-type(2) .compan_list_oppose .compan_list_content{
-    width:1.806rem;
-}
-.compan_list_agree .compan_list_content span{
-    position: absolute;
-    width:0.73rem;
-    right:-1.048rem;
-    top:0;
-    color:#09f;
-}
-.compan_list_oppose .compan_list_content span{
-    position: absolute;
-    width:0.73rem;
-    right:-1.048rem;
-    top:0;
-    color:red;
+  background:#0099ff;
 }
 .compan_list_oppose .compan_list_content{
-    width:6.742rem;
-    height:.290rem;
-    background:red;
-    margin-top:.129rem;
-    position: relative;
-    -webkit-border-radius:0.15rem;
-    -moz-border-radius:0.15rem;
-    border-radius:0.15rem;
+  background:#ff0000;
 }
+.compan_list_content{
+  position: relative;
+  height:.290rem;
+  margin-top:.129rem;
+  position: relative;
+  -webkit-border-radius:0.15rem;
+  -moz-border-radius:0.15rem;
+  border-radius:0.15rem;
+}
+.compan_list_content span{
+  display: block;
+  position: absolute;
+  right:-1.048rem;
+  height:.290rem;
+  line-height:.290rem;
+  top:0;
+  font-weight: 600;
+}
+.compan_list_agree .compan_list_content{
+  color:#0099ff;
+}
+.compan_list_oppose .compan_list_content{
+  color:#ff0000;
+}
+
+/*公司列表底部*/
 .compan_list_footer{
-    text-align:right;
-    font-size:.258rem;
+  margin-top:.419rem;
+  display: block;
+}
+.compan_list_footer .compan_list_icon{
     display: block;
-    margin-top:.403rem;
+    width:0.548rem;
+    height:0.484rem;
+    background-image:url("../image/result.png");
+    background-size:2.492rem .71rem ;
+    background-position:-.581rem 0rem;
+    cursor: pointer;
+    float:right;
+    margin-right:0.21rem;
+    margin-top:0.1rem;
 }
 .compan_list_footer span{
     display: block;
     float:right;
-    line-height:0.61rem;
-    height:0.61rem;
-}
-.compan_list_footer .compan_list_icon{
-    display: block;
-    width:0.75rem;
+    line-height:0.63rem;
     height:0.63rem;
-    background:url("../image/result.png") no-repeat;
-    background-position: 0px -71px;
-    float:right;
-    margin-right:0.21rem;
-}
+    font-size:.258rem
+};
 /*公司展示页面结束*/
 /*主体结束*/
