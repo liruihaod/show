@@ -8,6 +8,7 @@ body,html,ul,li,h3,p,button,input{
 }
 body{
     background:#fff;
+    font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', 'sans-serif';
 }
 li{
     list-style:none;
@@ -17,6 +18,17 @@ a{
     text-decoration: none;
     color:black;
 }
+button, input[type="search"] {
+
+    -webkit-appearance: none;
+
+}
+
+
+/*去除点击高亮效果*/
+a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+input::-moz-focus-inner{border:none;padding:0;}
+select, input{vertical-align:middle;}
 
 /*---公用样式---*/
 .clearfix:after{
@@ -35,7 +47,7 @@ a{
 
 /*---页眉搜索栏开始---*/
 header{
-   padding:1rem 0 .5rem 0;
+    padding:1rem 0 .5rem 0;
 }
 .header_input_search{
     width:7.8rem;
@@ -45,6 +57,7 @@ header{
     border:1px solid #e9e9e9;
     background:#f7f7f7;
     float:left;
+    -webkit-appearance:none;
 }
 
 input::-webkit-search-cancel-button {
@@ -67,16 +80,19 @@ input::-webkit-search-cancel-button {
 /*---内容页面开始---*/
 
 /*---公司展示页面---*/
-.company_list li{
-    margin-top:.322rem;
+.company_list .interval{
+    height:.322rem;
+    background:#ebebeb;
+    width:auto;
 }
 .company_list_header{
     margin-top:0.565rem;
     margin-bottom:1.048rem;
+    height:1.242rem;
 }
 .company_list_left{
-    width:.05rem;
     height:1.242rem;
+    width:.05rem;
     background:black;
     float:left;
 }
@@ -89,6 +105,7 @@ input::-webkit-search-cancel-button {
     font-size:.5rem;
     margin-top:-.1rem;
     margin-bottom:.1rem;
+
 }
 .company_list_right p{
     font-size:.371rem;
@@ -102,50 +119,50 @@ input::-webkit-search-cancel-button {
     font-size:0.242rem;
 }
 .compan_list_main .classify_more{
-  width:6.2rem;
+    width:6.2rem;
 }
 .compan_list_main .classify_few{
-  width:1.815rem;
+    width:1.815rem;
 }
 .conpan_list_number{
-  padding-right:.226rem;
+    padding-right:.226rem;
     text-align: right;
 }
 .compan_list_agree .compan_list_content{
-  background:#0099ff;
+    background:#0099ff;
 }
 .compan_list_oppose .compan_list_content{
-  background:#ff0000;
+    background:#ff0000;
 }
 .compan_list_content{
-  position: relative;
-  height:.290rem;
-  margin-top:.129rem;
-  position: relative;
-  -webkit-border-radius:0.15rem;
-  -moz-border-radius:0.15rem;
-  border-radius:0.15rem;
+    position: relative;
+    height:.290rem;
+    margin-top:.129rem;
+    position: relative;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
 }
 .compan_list_content span{
-  display: block;
-  position: absolute;
-  right:-1.048rem;
-  height:.290rem;
-  line-height:.290rem;
-  top:0;
-  font-weight: 600;
+    display: block;
+    position: absolute;
+    right:-1.048rem;
+    height:.290rem;
+    line-height:.290rem;
+    top:0;
+    font-weight: 600;
 }
 .compan_list_agree .compan_list_content{
-  color:#0099ff;
+    color:#0099ff;
 }
 .compan_list_oppose .compan_list_content{
-  color:#ff0000;
+    color:#ff0000;
 }
 
 /*公司列表底部*/
 .compan_list_footer{
-  margin-top:.419rem;
-  display: block;
+    margin-top:.419rem;
+    display: block;
 }
 .compan_list_footer .compan_list_icon{
     display: block;
@@ -165,6 +182,6 @@ input::-webkit-search-cancel-button {
     line-height:0.63rem;
     height:0.63rem;
     font-size:.258rem
-};
+}
 /*公司展示页面结束*/
 /*主体结束*/
