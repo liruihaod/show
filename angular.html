@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width:1000px;
+        }
+    </style>
+    <script src="./angular-1.5.7/angular.min.js"></script>
+
+    <script type="text/javascript" src="https://rawgit.com/zqjimlove/angular-ueditor/master/dist/angular-ueditor.js"></script>
+    <script type="text/javascript" src="utf8-php/ueditor.config.js"></script>
+    <script type="text/javascript" src="utf8-php/ueditor.all.js"></script>
+</head>
+<body ng-app="UeditorApp" >
+
+<myone></myone>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+<script>
+
+
+
+    var app=angular.module('UeditorApp', ["ng.ueditor"
+    ])
+    app.service("acorn",function(){
+        this.name="hello world"
+        return $.getScript("./utf8-php/ueditor.config.js")
+                .done(function() {
+                    $.getScript("./utf8-php/ueditor.all.js")
+                            .done(function(){
+                                $.getScript("https://rawgit.com/zqjimlove/angular-ueditor/master/dist/angular-ueditor.js")
+                            })
+                });
+    })
+    app.directive("myone",function(){
+        return {
+            restrict:"E",
+            template:'<div ng-controller="zone">'+
+            '<div class="ueditor"  ng-model="content1"></div>'+
+            '<textarea ng-model="content1"></textarea></div>',
+            replace:true,
+        }
+    });
+
+    app.controller("zone",["$scope","acorn",function($scope,acorn){
+        $scope.content1=acorn.name
+    }]);
+</script>
+</html>
