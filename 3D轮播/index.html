@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简明的现代魔法</title>
+	<style>
+
+            body,ul,li {
+                margin: 0;
+                padding: 0;
+            }
+            li{
+            	 list-style: none;
+            }
+		.carousel {
+    height: 194px;
+    width: 765px;
+    overflow: hidden;
+}
+
+.img-list {
+    position: relative;
+    height: 168px;
+}
+
+.img-item {
+    position: absolute;
+    left: 0;
+    transition:all .8s;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transform-origin: left;
+    transform: perspective(200px) rotateY(10deg) translateZ(-70px);
+    -webkit-box-reflect:below 0px -webkit-linear-gradient(top, transparent, transparent 90%, rgba(255,255,255,0.3));
+    );
+}
+
+.left-img-item {
+    left: 0;
+    transform-origin: left;
+    transform: perspective(200px) rotateY(10deg) translateZ(-70px);
+}
+
+.right-img-item {
+    left: 450px;
+    transform-origin: right;
+    transform: perspective(200px) rotateY(-10deg) translateZ(-70px);
+}
+
+.img-item img{
+    width: 365px;
+    height: 168px;
+    vertical-align: bottom;
+}
+
+.prev-img-item {
+    left: 50px;
+    transform-origin: left;
+    transform: perspective(200px) rotateY(10deg) translateZ(-35px);
+    z-index: 1;
+    opacity: 1;
+}
+
+.next-img-item {
+    left: 350px;
+    transform-origin: right;
+    transform: perspective(200px) rotateY(-10deg) translateZ(-35px);
+    z-index: 1;
+    opacity: 1;
+}
+
+.main-img-item {
+    z-index: 2;
+    left: 200px;
+    opacity: 1;
+    transform: perspective(0px) rotateY(0deg) translateZ(0px);
+}
+
+.img-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.img-modal.hide{
+	display:none;
+}
+.main-img-item .img-modal {
+    background: transparent;
+}
+
+.switch-list {
+    text-align: center;
+}
+
+.switch-item {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #E0E0E0;
+    border-radius: 50%;
+    margin: 15px 0 0 8px;
+    transition:all .8s;
+}
+
+.switch-item-active {
+    background: #EA0201;
+}
+
+.switch-list li:first-child {
+    margin-left: 0px;
+}
+	</style>
+</head>
+<body>
+	<div class="app">
+		<div class="carousel">
+			<ul class="img-list">
+				<li><a href="http://www.baidu.com" data-index="0" class="img-item"><img src="http://7xrunf.com1.z0.glb.clouddn.com/rcong-img1.jpg" alt="图片1">
+				<div class="img-modal"></div>
+				</a></li>
+				<li><a href="#1" data-index="1" class="img-item"><img src="http://7xrunf.com1.z0.glb.clouddn.com/rcong-img2.jpg" alt="图片1">
+				<div class="img-modal"></div>
+				</a></li>
+				<li><a href="#2" data-index="2" class="img-item"><img src="http://7xrunf.com1.z0.glb.clouddn.com/rcong-img3.jpg" alt="图片1">
+					<div class="img-modal"></div>
+				</a></li>
+				<li><a href="#3" data-index="3" class="img-item"><img src="http://7xrunf.com1.z0.glb.clouddn.com/rcong-img4.jpg" alt="图片1">
+				<div class="img-modal"></div>
+				</a></li>
+				<li><a href="#4" data-index="4" class="img-item"><img src="http://7xrunf.com1.z0.glb.clouddn.com/rcong-img5.jpg" alt="图片1">
+					<div class="img-modal"></div>
+				</a></li>
+				<li><a href="#5" data-index="5" class="img-item"><img src="http://7xrunf.com1.z0.glb.clouddn.com/rcong-img6.jpg" alt="图片1">
+					<div class="img-modal"></div>
+				</a></li>
+				
+			</ul>
+			<ul class="switch-list">
+				<li data-index="0" class="switch-item "></li>
+				<li data-index="1" class="switch-item"></li>
+				<li data-index="2" class="switch-item"></li>
+				<li data-index="3" class="switch-item"></li>
+				<li data-index="4" class="switch-item"></li>
+				<li data-index="5" class="switch-item"></li>
+			
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	function VCarousel(opts){
+		this.ct=opts;
+		this.listSize=this.ct.find("img").size();
+		this.mainImgItem=this.ct.children(".img-list").find('.img-item[data-index='+0+']');
+		this.prevImgItem=this.ct.children(".img-list").find('.img-item[data-index='+(this.listSize - 1)+']');
+		this.nextImgItem=this.ct.children(".img-list").find('.img-item[data-index='+1+']');
+		this.leftImgItem=this.ct.children(".img-list").find('.img-item[data-index='+(this.listSize - 2)+']');
+		this.rightImgItem=this.ct.children(".img-list").find('.img-item[data-index='+2+']');
+		this.mainSwitchItem=this.ct.children(".switch-list").find('.switch-item[data-index='+0+']');
+		this.imgItem=this.ct.children(".img-list").find(".img-item");
+		this.switchItemm=this.ct.children(".switch-list").find(".switch-item");
+		this.mainModal=this.mainImgItem.find(".img-modal");
+		this.index=null;
+	}
+	VCarousel.prototype={
+		init:function(){
+			var _this=this;
+			_this.addStyle();
+			_this.bind();
+			_this.showMe();
+		},
+		bind:function(){
+			var _this=this;
+			_this.imgItem.each(function(){
+				$(this).on("click",function(){
+					var index=$(this).attr("data-index");
+					_this.switchItem(index);
+				})
+			});
+			_this.switchItemm.each(function(){
+				$(this).on("click",function(e){
+            		e.stopPropagation();
+					var index=$(this).attr("data-index");
+					_this.switchItem(index);
+				})
+			})
+		},
+		clearStyle:function(){
+			var _this=this;
+			_this.mainImgItem.removeClass('main-img-item');
+	        _this.prevImgItem.removeClass('prev-img-item');
+	        _this.nextImgItem.removeClass('next-img-item');
+	        _this.leftImgItem.removeClass('left-img-item');
+	        _this.rightImgItem.removeClass('right-img-item');
+	        _this.mainSwitchItem.removeClass('switch-item-active');
+	        setTimeout(function(){
+	        	 _this.mainModal.removeClass("hide");
+	        },2000)
+	       
+		},
+		addStyle:function(){
+			var _this=this;
+			_this.mainImgItem.addClass('main-img-item');
+	        _this.prevImgItem.addClass('prev-img-item');
+	        _this.nextImgItem.addClass('next-img-item');
+	        _this.leftImgItem.addClass('left-img-item');
+	        _this.rightImgItem.addClass('right-img-item');
+	        _this.mainSwitchItem.addClass('switch-item-active');
+	        setTimeout(function(){
+	        	 _this.mainModal.addClass("hide");
+	        },2000)
+		},
+		switchItem:function(index){
+			var _this=this;
+			var index=parseInt(index);
+			_this.clearStyle();
+			_this.mainImgItem = _this.ct.children(".img-list").find('.img-item[data-index='+index+']');
+			_this.mainSwitchItem = _this.ct.children(".switch-list").find('.switch-item[data-index='+index+']');
+
+			if(index===0){
+			_this.prevImgItem =_this.ct.children(".img-list").find('.img-item[data-index='+(_this.listSize - 1)+']');
+			_this.leftImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+(_this.listSize - 2)+']');
+			}else if(index===1){
+			_this.prevImgItem =_this.ct.children(".img-list").find('.img-item[data-index='+(index - 1)+']');
+			_this.leftImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+(_this.listSize - 2)+']');
+			}else if(index>1){
+				_this.prevImgItem =_this.ct.children(".img-list").find('.img-item[data-index='+(index - 1)+']');
+			_this.leftImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+(index - 2)+']');
+			}
+
+
+			if(index===(_this.listSize - 1)){
+				_this.nextImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+0+']');
+				_this.leftImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+1+']');
+			}else if(index===(_this.listSize-2)){
+				_this.nextImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+(_this.listSize - 1)+']');
+				_this.leftImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+0+']');
+			}else if(index<(_this.listSize-2)){
+				_this.nextImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+(index+1)+']');
+				_this.leftImgItem=_this.ct.children(".img-list").find('.img-item[data-index='+(index + 2)+']');
+			}
+
+			_this.addStyle();
+		},
+		showMe:function(){
+			console.log("hello,我是zone.关于本组件细节部分已在博客说明")
+		}
+	}
+
+
+	var vcarousel = new VCarousel($(".carousel")).init();
+</script>
+</html>
