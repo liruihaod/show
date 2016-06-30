@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        function init(){
+            var width=document.documentElement.clientWidth;
+            var head=document.getElementsByTagName("head")[0];
+            var style=document.createElement("style");
+            if(width>640){
+
+                style.innerHTML="html,body{font-size:"+64+"px;"+"width:"+640+"px;"+"margin:0 auto;}"+
+                        ".footer p{width:640px;margin:0 auto;}";
+            }else{
+                style.innerHTML="html,body{font-size:"+width/10+"px;}";
+            }
+
+            var styleNum=document.getElementsByTagName("style").length;
+            head.appendChild(style);
+            for(var i=0;i<document.getElementsByTagName("style").length-1;i++){
+                document.getElementsByTagName("style")[i].remove();
+            }
+        }
+        init();
+        window.addEventListener("resize",function(){
+            init();
+        })
+    </script>
+</head>
+<body>
+
+
+<!-- 页眉开始 -->
+<header >
+    <!-- 页眉搜索栏开始 -->
+    <div class="header-search clearfix">
+        <div class="main"><form action="" id="search-form" class="clearfix">
+            <input  class="header-input-search" type="search" placeholder="找找自己任职过的公司">
+        </form>
+        </div>
+
+            <span class="header-search-icon"></span>
+
+
+    </div>
+    <!-- 页眉搜索栏结束 -->
+</header>
+<!-- 页眉结束 -->
+<!-- 内容开始 -->
+<div class="content">
+    <!-- 公司展示开始 -->
+    <ul class="company-list">
+        <li class="interval"></li>
+        <li class="wrap wrapsss">
+            <div class="company-list-header clearfix">
+                <div class="company-list-left"></div>
+                <div class="company-list-right">
+                    <a href="chinamove.html"><h3>武汉环球宇宙科技有限公司</h3></a>
+                    <p>这家公司能不能去?</p>
+                </div>
+            </div>
+            <div class="compan-list-main">
+                <div class="compan-list-agree">
+                    <div class="conpan-list-number">
+
+                    </div>
+                    <div class="compan-list-content">
+                        <div style="width:20%" class="compan-list-approval">
+                            <div class="compan-list-message">
+                                <span class="compan-list-applaud">123</span><span>人赞同</span>
+                            </div>
+                            <span class="compan-list-opinion">可以去</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compan-list-oppose ">
+                    <div class="conpan-list-number">
+
+                    </div>
+                    <div class="compan-list-content">
+
+                        <div style="width:80%" class="compan-list-approval">
+                            <div class="compan-list-message">
+                                <span class="compan-list-applaud">12321</span><span>人赞同</span>
+                            </div>
+                            <span class="compan-list-opinion">不能去</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="chinamove.html" class="compan-list-footer clearfix">
+                <span>点评</span><span class="compan-list-applaud">124350</span>
+                <i class="compan-list-icon"></i>
+            </a>
+        </li>
+        <li class="interval"></li>
+        <li class="wrap">
+            <div class="company-list-header clearfix">
+                <div class="company-list-left"></div>
+                <div class="company-list-right">
+                    <a href="chinamove.html"><h3>武汉玩翻天科技有限公司</h3></a>
+                    <p>这家公司能不能去?</p>
+                </div>
+            </div>
+            <div class="compan-list-main">
+                <div class="compan-list-agree">
+                    <div class="conpan-list-number">
+
+                    </div>
+                    <div class="compan-list-content">
+                        <div style="width:80%" class="compan-list-approval">
+                            <div class="compan-list-message">
+                                <span class="compan-list-applaud">1233421</span><span>人赞同</span>
+                            </div>
+                            <span class="compan-list-opinion">可以去</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compan-list-oppose ">
+                    <div class="conpan-list-number">
+
+                    </div>
+                    <div class="compan-list-content">
+                        <div style="width:20%" class="compan-list-approval">
+                            <div class="compan-list-message">
+                                <span class="compan-list-applaud">1242</span><span>人赞同</span>
+                            </div>
+                            <span class="compan-list-opinion">不能去</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="chinamove.html" class="compan-list-footer clearfix">
+                <span>点评</span><span class="compan-list-applaud">124350</span>
+                <i class="compan-list-icon"></i>
+            </a>
+        </li>
+        <li class="interval"></li>
+        <li class="wrap">
+            <div class="company-list-header clearfix">
+                <div class="company-list-left"></div>
+                <div class="company-list-right">
+                    <a href="chinamove.html"><h3>武汉得意生活科技有限公司</h3></a>
+                    <p>这家公司能不能去?</p>
+                </div>
+            </div>
+            <div class="compan-list-main">
+                <div class="compan-list-agree">
+                    <div class="conpan-list-number">
+
+                    </div>
+                    <div class="compan-list-content">
+                        <div style="width:70%" class="compan-list-approval">
+                            <div class="compan-list-message">
+                                <span class="compan-list-applaud">1234142</span><span>人赞同</span>
+                            </div>
+                            <span class="compan-list-opinion">可以去</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compan-list-oppose ">
+                    <div class="conpan-list-number">
+
+                    </div>
+                    <div class="compan-list-content">
+                        <div style="width:30%" class="compan-list-approval">
+                            <div class="compan-list-message">
+                                <span class="compan-list-applaud">123</span><span>人赞同</span>
+                            </div>
+                            <span class="compan-list-opinion">不能去</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="chinamove.html" class="compan-list-footer clearfix">
+                <span>点评</span><span class="compan-list-applaud">124350</span>
+                <i class="compan-list-icon"></i>
+            </a>
+        </li>
+    </ul>
+    <!-- 公司展示结束 -->
+    <div class="footer"><p class="tip">本页面观点仅代表网友意见，不代表得意生活公司观点。</p></div>
+    <div class="hidden-box"></div>
+</div>
+</body>
+<script src="js/app/zepto.min.js"></script>
+</html>

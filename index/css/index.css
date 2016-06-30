@@ -1,0 +1,232 @@
+/*----清除默认设置----*/
+body,html,ul,li,h3,p,button,input{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background:#fff;
+    font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', 'sans-serif';
+}
+li{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+button, input[type="search"] {
+
+    -webkit-appearance: none;
+
+}
+
+
+/*去除点击高亮效果*/
+a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+input::-moz-focus-inner{border:none;padding:0;}
+select, input{vertical-align:middle;}
+
+/*---公用样式---*/
+.clearfix:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+/*主体开始*/
+.wrap{
+    padding:0 .4rem;
+}
+
+/*--------------页面开始------------*/
+
+/*---页眉搜索栏开始---*/
+header{
+    padding:.85rem .4rem .5rem .4rem;
+}
+.header-search{
+    margin-top:.565rem;
+    padding-right:.794rem;
+}
+.header-search .main{
+    float:left;
+    width:100%;
+}
+.header-input-search{
+    float:left;
+    width:100%;
+    height:0.71rem;
+    font-size:0.3rem;
+    border:1px solid #e9e9e9;
+    background:#f7f7f7;
+    padding-left:0.35rem;
+    -webkit-appearance:none;
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.header-search .header-search-icon{
+    display: block;
+    width:.494rem;
+    height:.71rem;
+    background-image:url("../image/result.png");
+    background-size:2.492rem .71rem ;
+    background-position:0rem 0rem;
+    margin-left:0.35rem;
+    cursor: pointer;
+    border:none;
+    float:right;
+    margin-left:-.494rem;
+    position: relative;
+    left:.794rem;
+}
+
+/*---页眉搜索栏结束---*/
+
+/*---内容页面开始---*/
+
+/*---公司展示页面---*/
+.company-list{
+    margin-bottom:1.4rem;
+}
+.company-list .interval{
+    height:.322rem;
+    background:#ebebeb;
+    width:auto;
+}
+.company-list-header{
+    margin-top:0.565rem;
+    margin-bottom:1.048rem;
+    height:1.242rem;
+}
+.company-list-left{
+    height:1.242rem;
+    width:.05rem;
+    background:black;
+    float:left;
+}
+.company-list-right{
+    height:1.242rem;
+    float:left;
+    padding-left:.387rem;
+}
+.company-list-right h3{
+    font-size:.5rem;
+    margin-top:-.1rem;
+    margin-bottom:.1rem;
+
+}
+.company-list-right p{
+    font-size:.371rem;
+    font-weight: normal;
+}
+/*公司列表中间部分*/
+.compan-list-main .compan-list-agree{
+    margin-bottom:.75rem;
+}
+.compan-list-main {
+    font-size:0.242rem;
+}
+
+.conpan-list-number{
+    /*padding-right:2.074rem;*/
+    text-align:left;
+}
+
+.compan-list-content{
+    position: relative;
+    height:.290rem;
+    margin-top:.129rem;
+    position: relative;
+    padding-right:1.5rem;
+}
+.compan-list-agree .compan-list-approval{
+    background:#09f;
+}
+.compan-list-oppose .compan-list-approval{
+    background:#f00;
+}
+.compan-list-approval{
+    width:100%;
+    height:.290rem;
+    background:black;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
+    position: relative;
+}
+.compan-list-content .compan-list-opinion{
+    display: block;
+    position: absolute;
+    right:-1rem;;
+    height:.290rem;
+    line-height:.290rem;
+    top:0;
+    font-weight: 600;
+}
+.compan-list-message{
+    min-width:3rem;
+    position: absolute;
+    right:.129rem;
+    top:-.4rem;
+    text-align:right;
+}
+/*公司列表底部*/
+.compan-list-footer{
+    margin-top:.419rem;
+    display: block;
+    padding-bottom:.4rem;
+
+}
+.compan-list-footer .compan-list-icon{
+    display: block;
+    width:0.548rem;
+    height:0.484rem;
+    background-image:url("../image/result.png");
+    background-size:2.492rem .71rem ;
+    background-position:-.581rem 0rem;
+    cursor: pointer;
+    float:right;
+    margin-right:0.21rem;
+    margin-top:0.1rem;
+}
+.compan-list-footer span{
+    display: block;
+    float:right;
+    line-height:0.63rem;
+    height:0.63rem;
+    font-size:.258rem
+}
+/*公司展示页面结束*/
+
+/*页尾开始*/
+.footer{
+    position:fixed;
+    width:100%;
+    bottom:0;
+    right:0;
+    height:1.25rem;
+    background:#f5f5f5;
+}
+
+.footer .tip{
+    font-size:.2rem;
+    height:1.25rem;
+    line-height:1.25rem;
+    text-align: center;
+    color:#999;
+}
+/*尾页结束*/
+
+.hidden-box{
+    width:0.2rem;
+    visibility: hidden;
+}
+/*主体结束*/
+

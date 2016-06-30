@@ -1,0 +1,564 @@
+/*----清除默认设置----*/
+body,html,ul,li,h3,p,button,input{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background:#fff;
+    font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', 'sans-serif';
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+li{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+button, input[type="search"], input[type="text"] {
+
+    -webkit-appearance: none;
+
+}
+
+
+/*去除点击高亮效果*/
+a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+input::-moz-focus-inner{border:none;padding:0;}
+select, input{vertical-align:middle;}
+/*---公用样式---*/
+.clearfix:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+/*主体开始*/
+.wrap{
+    padding:0 .4rem;
+}
+
+/*返回导航*/
+#nav{
+    font-size:.371rem;
+    margin-top:1rem;
+}
+#nav .nav-return{
+    width:.540rem;
+    height:.540rem;
+    display: block;
+    background-image:url("../image/result.png");
+    background-size:2.492rem .71rem ;
+    background-position: -1.21rem 0px;
+    float:left;
+    margin-left:-0.35rem;
+}
+#nav a{
+    height:.548rem;
+    line-height: .548rem;
+    float:left;
+}
+/*上层页面开始*/
+.header{
+    margin-bottom:0.806rem;
+}
+
+
+/*上层页面结束*/
+
+.interval{
+    height:.129rem;
+    background:#ccc;
+}
+
+/*公司列表*/
+.content{
+    padding-bottom:1.5rem;
+}
+/*---公司展示页面---*/
+.company-list{
+    margin-bottom:1.4rem;
+}
+.company-list .interval{
+    height:.322rem;
+    background:#ebebeb;
+    width:auto;
+}
+.company-list-header{
+    margin-top:0.565rem;
+    margin-bottom:1.048rem;
+    height:1.242rem;
+}
+.company-list-left{
+    height:1.242rem;
+    width:.05rem;
+    background:black;
+    float:left;
+}
+.company-list-right{
+    height:1.242rem;
+    float:left;
+    padding-left:.387rem;
+}
+.company-list-right h3{
+    font-size:.5rem;
+    margin-top:-.1rem;
+    margin-bottom:.1rem;
+
+}
+.company-list-right p{
+    font-size:.371rem;
+    font-weight: normal;
+}
+/*公司列表中间部分*/
+.compan-list-main .compan-list-agree{
+    margin-bottom:.484rem;
+}
+.compan-list-main {
+    font-size:0.242rem;
+}
+
+.conpan-list-number{
+    /*padding-right:2.074rem;*/
+    text-align:left;
+}
+
+.compan-list-content{
+    position: relative;
+    height:.290rem;
+    margin-top:.129rem;
+    position: relative;
+    padding-right:1.5rem;
+}
+.compan-list-agree .compan-list-approval{
+    background:#09f;
+}
+.compan-list-oppose .compan-list-approval{
+    background:#f00;
+}
+.compan-list-approval{
+    width:100%;
+    height:.290rem;
+    background:black;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
+    position: relative;
+}
+.compan-list-content .compan-list-opinion{
+    display: block;
+    position: absolute;
+    right:-1.2rem;;
+    height:.290rem;
+    line-height:.290rem;
+    top:0;
+    font-weight: 600;
+}
+.compan-list-message{
+    min-width:3rem;
+    position: absolute;
+    right:.129rem;
+    top:-.4rem;
+    text-align:right;
+}/*---公司展示页面---*/
+.company-list{
+    margin-bottom:1.4rem;
+}
+.company-list .interval{
+    height:.322rem;
+    background:#ebebeb;
+    width:auto;
+}
+.company-list-header{
+    margin-top:0.565rem;
+    margin-bottom:1.048rem;
+    height:1.242rem;
+}
+.company-list-left{
+    height:1.242rem;
+    width:.05rem;
+    background:black;
+    float:left;
+}
+.company-list-right{
+    height:1.242rem;
+    float:left;
+    padding-left:.387rem;
+}
+.company-list-right h3{
+    font-size:.5rem;
+    margin-top:-.1rem;
+    margin-bottom:.1rem;
+
+}
+.company-list-right p{
+    font-size:.371rem;
+    font-weight: normal;
+}
+/*公司列表中间部分*/
+.compan-list-main .compan-list-agree{
+    margin-bottom:.75rem;
+}
+.compan-list-main {
+    font-size:0.242rem;
+}
+
+.conpan-list-number{
+    /*padding-right:2.074rem;*/
+    text-align:left;
+}
+
+.compan-list-content{
+    position: relative;
+    height:.290rem;
+    margin-top:.129rem;
+    position: relative;
+    padding-right:1.5rem;
+}
+.compan-list-agree .compan-list-approval{
+    background:#09f;
+}
+.compan-list-oppose .compan-list-approval{
+    background:#f00;
+}
+.compan-list-approval{
+    width:100%;
+    height:.290rem;
+    background:black;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
+    position: relative;
+}
+.compan-list-content .compan-list-opinion{
+    display: block;
+    position: absolute;
+    right:-1rem;;
+    height:.290rem;
+    line-height:.290rem;
+    top:0;
+    font-weight: 600;
+}
+.compan-list-message{
+    min-width:3rem;
+    position: absolute;
+    right:.129rem;
+    top:-.4rem;
+    text-align:right;
+}
+/*公司列表结束*/
+
+
+/*主体内容开始*/
+.content{
+    background:#ebebeb;
+}
+.content-ct{
+    padding-top:0.911rem;
+}
+.content-ct li{
+    margin-bottom:.613rem;
+    margin-left:0.258rem;
+}
+.content-ct-left,.content-ct-right{
+    float:left;
+}
+.content-ct-left img{
+    display: block;
+    width:1rem;
+    height:1rem;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.content-ct-left div{
+    width:1rem;
+    font-size:0.210rem;
+    text-align:center;
+    margin-top:.202rem;
+}
+
+.content-ct-username{
+    font-size:.290rem;
+    margin-left:.484rem;
+    margin-bottom:.161rem;
+}
+.content-ct-details{
+    font-size:.355rem;
+    margin-left:.689rem;
+    padding:.323rem .266rem;
+    border:.02rem solid #c9c9c9;
+    -webkit-border-radius:.121rem;
+    -moz-border-radius:.121rem;
+    border-radius:.121rem;
+    border-top-left-radius:0px;
+    position: relative;
+    background:white;
+    max-width:6rem;
+}
+.content-ct-details:before{
+    content:"";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 .324rem .161rem 0;
+    border-color: transparent #c9c9c9 transparent transparent;
+    position: absolute;
+    left:-.324rem;
+    top:-.02rem;
+
+}
+.content-ct-details:after{
+    content:"";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 .324rem .145rem 0;
+    border-color: transparent white transparent transparent;
+    position: absolute;
+    left:-.242rem;
+    top:0px;
+}
+.content-ct-username{
+    color:#aaa;
+}
+
+/*页尾开始*/
+.footer{
+    position:fixed;
+    width:100%;
+    bottom:0;
+    right:0;
+    height:1.25rem;
+    background:#f5f5f5;
+}
+
+.footer .tip{
+    float:left;
+    font-size:.2rem;
+    height:1.25rem;
+    line-height:1.25rem;
+    margin-left:.4rem;
+    color:#999;
+}
+.footer .participation{
+    float:right;
+    font-size:.355rem;
+    width:2.782rem;
+    text-align: center;
+    height:.903rem;
+    line-height:.903rem;
+    background:#ff6600;
+    -webkit-border-radius:.121rem;
+    -moz-border-radius:.121rem;
+    border-radius:.121rem;
+    margin:.210rem .435rem 0 -2.782rem;
+}
+.footer .participation a{
+    color:white;
+}
+
+
+
+/*弹出框样式*/
+.dialog{
+    width:8.468rem;
+    height:4.677rem;
+    position:fixed;
+    left:.758rem;
+    top:5.774rem;
+    background:white;
+    z-index:10;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s;
+    -webkit-border-radius:.15rem;
+    -moz-border-radius:.15rem;
+    border-radius:.15rem;
+    overflow:hidden;
+}
+.dialog.move{
+
+    top:20%
+}
+.dialog-content{
+    width:6.2rem;
+}
+.dialog-first,.dialog-second{
+    position: absolute;
+    left:0;
+    top:0;
+    padding:0 .847rem 0 1.024rem;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
+}
+/*弹出框蒙层样式*/
+.dialog-blind{
+    position: fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:rgba(106,106,106,.655);
+    z-index:2;
+}
+
+/*关闭按钮样式*/
+.dialog-close{
+    width:.655rem;
+    height:.655rem;
+    background:url(../image/result.png);
+    background-position:-1.831rem 0px;
+    background-size:2.492rem .71rem ;
+    position: absolute;
+    right:0;
+    top:-.855rem;
+    cursor: pointer;
+}
+.dialog-close:focus{
+    outline:none;
+}
+/*弹出框第一步样式*/
+.dialog-first{
+    padding-top:.444rem;
+    background:#fff;
+}
+.dialog-first-main,.dialog-second-main{
+    width:6.589rem;
+    margin:0 auto;
+}
+.dialog-first-main .dialog-title{
+    font-size:.403rem;
+    margin-bottom:.258rem;
+}
+.dialog-first-main .dialog-question{
+    font-size:.387rem;
+    margin-bottom:.202rem;
+}
+.dialog-response{
+    width:6.2rem;
+    height:.952rem;
+    border:1px solid #aaa;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
+    font-size:.323rem;
+    padding-left:.371rem;
+    margin-bottom:.403rem;
+}
+.dialog-response:focus{
+    outline:none;
+}
+.dialog-footer{
+    width:6.2rem;
+}
+.dialog-footer a{
+    display: block;
+    height:0.919rem;
+    width:1.75rem;
+    background:#ff6600;
+    font-size:.339rem;
+    text-align:center;
+    line-height:0.919rem;
+    -webkit-border-radius:.121rem;
+    -moz-border-radius:.121rem;
+    border-radius:.121rem;
+    float:right;
+    color:white;
+    margin-bottom:.516rem;
+}
+/*第一页样式结束*/
+
+/*第二页样式*/
+.dialog-second{
+    background:#fff;
+}
+.dialog-second-main .dialog-second-tips{
+    font-size:.387rem;
+    margin-top:0.766rem;
+}
+.dialog-second-agree,.dialog-second-oppose{
+    margin-top:0.540rem;
+    font-size:.323rem;
+}
+.dialog-second-head{
+    margin-top:.565rem;
+    margin-bottom:.323rem;
+}
+.dialog-second-head .dialog-second-left{
+    font-size:.387rem;
+    float:left;
+    height:.895rem;
+    line-height:.895rem;
+}
+.dialog-second-head .dialog-second-right{
+    font-size:.323rem;
+    float:left;
+    height:.895rem;
+    line-height:.895rem;
+    text-align: center;
+}
+.dialog-second-head .dialog-second-right a{
+    display: block;
+    border:.032rem solid #aaa;
+    width:1.742rem;
+    float:left;
+    margin-left:.855rem;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
+}
+.dialog-second-head .dialog-second-right .active{
+    background:#0099ff;
+    color:white;
+    border:none;
+}
+.form-text{
+    width:6.589rem;
+    height:.952rem;
+    border:1px solid #aaa;
+    -webkit-border-radius:0.15rem;
+    -moz-border-radius:0.15rem;
+    border-radius:0.15rem;
+    font-size:.323rem;
+    padding-left:.371rem;
+    margin-bottom:.403rem;
+}
+.dialog-second-put{
+    display: block;
+    height:0.919rem;
+    width:1.75rem;
+    background:#ff6600;
+    font-size:.339rem;
+    text-align:center;
+    line-height:0.919rem;
+    -webkit-border-radius:.121rem;
+    -moz-border-radius:.121rem;
+    border-radius:.121rem;
+    float:right;
+    color:white;
+    border:none;
+    cursor: pointer;
+    margin-bottom:.516rem;
+}
+.dialog-second-put:focus{
+    outline:none;
+}
+.dialog-second-right  .active{
+    background:#0099ff;
+    color:white;
+    border:none;
+}
+/*弹出框样式结束*/

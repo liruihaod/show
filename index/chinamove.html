@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/move.css">
+    <script>
+        function init(){
+            var width=document.documentElement.clientWidth;
+            var head=document.getElementsByTagName("head")[0];
+            var style=document.createElement("style");
+            if(width>640){
+
+                style.innerHTML="html,body{font-size:"+64+"px;"+"width:"+640+"px;"+"margin:0 auto;}"+
+                                ".footer-main{width:640px;margin:0 auto}";
+            }else{
+                style.innerHTML="html,body{font-size:"+width/10+"px;}";
+            }
+
+
+            head.appendChild(style);
+            for(var i=0;i<document.getElementsByTagName("style").length-1;i++){
+                document.getElementsByTagName("style")[i].remove();
+            }
+        }
+        init();
+        window.addEventListener("resize",function(){
+            init();
+        })
+    </script>
+
+</head>
+<body>
+<!--返回导航-->
+<div id="nav" class="wrap clearfix">
+    <span class=nav-return></span><a href="index.html">返回</a>
+
+</div>
+<!--上层页面开始-->
+<div class="header wrap">
+    <div class="company-list-header clearfix">
+        <div class="company-list-left"></div>
+        <div class="company-list-right">
+            <a href="#"><h3>武汉环球宇宙科技有限公司</h3></a>
+            <p>这家公司能不能去?</p>
+        </div>
+    </div>
+    <div class="compan-list-main">
+        <div class="compan-list-agree">
+            <div class="conpan-list-number">
+
+            </div>
+            <div class="compan-list-content">
+                <div style="width:20%" class="compan-list-approval">
+                    <div class="compan-list-message">
+                        <span class="compan-list-applaud">123</span><span>人赞同</span>
+                    </div>
+                    <span class="compan-list-opinion">可以去</span>
+                </div>
+            </div>
+        </div>
+        <div class="compan-list-oppose ">
+            <div class="conpan-list-number">
+
+            </div>
+            <div class="compan-list-content">
+                <div style="width:80%" class="compan-list-approval">
+                    <div class="compan-list-message">
+                        <span class="compan-list-applaud">12321</span><span>人赞同</span>
+                    </div>
+                    <span class="compan-list-opinion">不能去</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--上层页面结束-->
+
+<div class="interval"></div>
+<!--对话内容开始-->
+<div class="content">
+    <ul class="content-ct ">
+        <li class="clearfix">
+            <div class="content-ct-left">
+                <a href="#"><img src="image/icon.jpg" alt=""></a>
+                <div><span class="content-ct-time">5</span>分钟前</div>
+            </div>
+            <div class="content-ct-right">
+                <div class="content-ct-username">
+                    米老树
+                </div>
+                <div class="content-ct-details">
+                    太快了特别是过十字路口要减速。
+                </div>
+            </div>
+        </li>
+
+        <li class="clearfix">
+            <div class="content-ct-left">
+                <a href="#"><img src="image/icon.jpg" alt=""></a>
+                <div><span class="content-ct-time">5</span>分钟前</div>
+            </div>
+            <div class="content-ct-right">
+                <div class="content-ct-username">
+                    米老树
+                </div>
+                <div class="content-ct-details">
+                    楼主找骂是不是？
+                </div>
+            </div>
+        </li>
+
+        <li class="clearfix">
+            <div class="content-ct-left">
+                <a href="#"><img src="image/icon.jpg" alt=""></a>
+                <div><span class="content-ct-time">5</span>分钟前</div>
+            </div>
+            <div class="content-ct-right">
+                <div class="content-ct-username">
+                    米老树
+                </div>
+                <div class="content-ct-details">
+                    太快了特别是过十字路口要减速。
+                </div>
+            </div>
+        </li>
+
+        <li class="clearfix">
+            <div class="content-ct-left">
+                <a href="#"><img src="image/icon.jpg" alt=""></a>
+                <div><span class="content-ct-time">5</span>分钟前</div>
+            </div>
+            <div class="content-ct-right">
+                <div class="content-ct-username">
+                    米老树
+                </div>
+                <div class="content-ct-details">
+                    挺快的，一拉方向盘就起飞了。要小心，路口电动车，神出鬼没。
+                </div>
+            </div>
+        </li>
+
+        <li class="clearfix">
+            <div class="content-ct-left">
+                <a href="#"><img src="image/icon.jpg" alt=""></a>
+                <div><span class="content-ct-time">5</span>分钟前</div>
+            </div>
+            <div class="content-ct-right">
+                <div class="content-ct-username">
+                    米老树
+                </div>
+                <div class="content-ct-details">
+                    挺快的，一拉方向盘就起飞了。要小心，路口电动车，神出鬼没。
+                    挺快的，一拉方向盘就起飞了。要小心，路口电动车，神出鬼没。
+                </div>
+            </div>
+        </li>
+
+        <li class="clearfix">
+            <div class="content-ct-left">
+                <a href="#"><img src="image/icon.jpg" alt=""></a>
+                <div><span class="content-ct-time">5</span>分钟前</div>
+            </div>
+            <div class="content-ct-right">
+                <div class="content-ct-username">
+                    米老树
+                </div>
+                <div class="content-ct-details">
+                    挺快的，一拉方向盘就起飞了。要小心，路口电动车，神出鬼没。
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--对话内容结束-->
+<div class="dialog-blind" style="display:none"></div>
+<div class="dialog" style="display:none;">
+    <div class="dialog-close"></div>
+    <div class="dialog-content">
+        <div class="dialog-first" >
+            <div class="dialog-first-main">
+                <div class="dialog-head">
+                    <div class="dialog-title">中国移动武汉分公司</div>
+                </div><div class="dialog-main">
+                <div class="dialog-question"><span>总经理姓什么：</span></div>
+                <input type="text" placeholder="答对问题才可以参与" class="dialog-response">
+            </div>
+
+                <div class="dialog-footer clearfix">
+                    <a href="javascript:void(0)" class="dialog-next">提交</a></div></div></div>
+        <div class="dialog-second" style="display:none">
+            <div class="dialog-second-main" >
+                <div class="dialog-second-head clearfix">
+                    <div class="dialog-second-left">请选择</div>
+                    <div class="dialog-second-right">
+                        <a href="javascript:void(0)" class="dialog-go" keyword="go">可以去</a>
+                        <a href="javascript:void(0)" class="dialog-back" keyword="back">不能去</a></div></div>
+
+                <input type="text" placeholder="留点意见建议" class="form-text">
+                <a  class="dialog-second-put">提交</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer clearfix" >
+    <div class="footer-main clearfix">
+        <div class="tip"><p>本观点仅代表网友意见，不代表得意生活公司观点。</p></div>
+        <div class="participation" key="false"><a href="javascript:void(0)">我也来参与</a></div>
+    </div>
+</div>
+
+<div class="hidden" style="visibility:hidden;"></div>
+</body>
+<script src="js/app/zepto.min.js"></script>
+<script src="js/move.js"></script>
+<scirpt src="js/support.js"></scirpt>
+</html>
