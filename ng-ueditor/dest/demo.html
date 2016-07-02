@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../angular-1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="zone">
+<ng-ueditor ng-model="test"></ng-ueditor>
+<textarea ng-model="test"></textarea>
+</body>
+
+<script type="text/json" id="ueditor">
+{
+    "config": {
+    },
+    "url": {
+        "config": "http://ueditor.baidu.com/ueditor/ueditor.config.js",
+        "main": "http://ueditor.baidu.com/ueditor/ueditor.all.js"
+    }
+}
+</script>
+    <script src="../ngUeditor.js"></script>
+<script>
+    (function () {
+        angular.module('zone', ["ng.ueditor"]);
+    }());
+</script>
+</html>
