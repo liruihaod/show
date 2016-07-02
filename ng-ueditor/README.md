@@ -4,7 +4,7 @@
 
 
 ## 如何使用
-***[示例Demo]()
+***[示例Demo]***(https://github.com/liruihaod/show/blob/master/ng-ueditor/dest/demo.html)
 ### 安装
 
  - 1.下载最新的`angular.js`文件。引入到页面中。
