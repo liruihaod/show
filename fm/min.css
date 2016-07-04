@@ -18,7 +18,11 @@ a{
   clear:both;
 }
 /*重置部分结束*/
-
+.music_wrap{
+  position: absolute;
+  right:350px;
+  top:20px;
+}
 /*图标部分*/
 .voide_icon{
   width:40px;
@@ -70,6 +74,9 @@ a{
   float:left;
   width:300px;
   height:365px;
+}
+.interface.move_tip{
+  cursor: pointer;
 }
 .voide_side_nav{
   padding:12px;
@@ -437,4 +444,7 @@ text-align: center;
   margin-left:-34px;
   position: relative;
   left:34px;
+}
+.interface_wrap.move_tip{
+  cursor: pointer;
 }

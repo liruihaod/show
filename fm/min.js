@@ -13,6 +13,7 @@ function Webmusic(){
 		 this.getDouBanSong();       // 获取豆瓣歌曲
 		 this.getChannel();       // 获取豆瓣电台信息
 		 this.defaultSet();         //初始选择豆瓣第一个播放
+		 this.drag($(".music_wrap")) //拖动初始化；
 };
 
 Webmusic.prototype={
@@ -298,6 +299,7 @@ interface:function(){
 	defaultSet:function(){
 		$(".voide_channel li").eq(0).addClass("fa fa-check-circle");//默认第一个
 	},
+
 	judgeNex: function(){
 				 if($('.voide_ct .frame').contents().find('#player')[0].currentTime >= $('.frame').contents().find('#player')[0].duration){
 					 if(this.looping)return;
@@ -313,7 +315,7 @@ interface:function(){
 	startPlay:function(){
 		if(localStorage.getItem('radioPlaying')==='true')return;
 				localStorage.setItem('radioPlaying','true');
-				$('.voide_ct .frame').contents().find('#player')[0].play();
+			$('.frame').contents().find('#player')[0].play();
 				$('.voide_ct .play').removeClass('fa-pause').addClass('fa-play-circle-o');
 				this.setTime();
 				this.playing=true;
@@ -481,6 +483,31 @@ dealTime: function(data){
 			 };
 		 },
 
-		//拖动
+		//设置拖拽
+		drag:function($node){
+			var _this=this;
+			$node.on("mousedown",function(e){
+				console.log("鼠标按下");
+				$node.addClass("move_tip");
+				$(".interface_wrap").addClass("move_tip");
+				_this.left=e.pageX-$node.offset().left;
+				_this.top=e.pageY-$node.offset().top;
+				_this.draging=true;
+			});
+			$node.on("mouseup",function(){
+				console.log("鼠标按上")
+				_this.draging=false;
+				$node.removeClass("move_tip");
+			});
+			$("body").on("mousemove",function(e){
+				if(_this.draging){
+					console.log("滑动")
+					$node.css({
+						left:+e.pageX-_this.left,
+						top:e.pageY-_this.top
+					});
+				}
+			});
+		}
 };
 var music=new Webmusic();
