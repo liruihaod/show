@@ -1,0 +1,54 @@
+/**去除默认样式**/
+html,body,ul,li,p,h4,h5{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+html,body{
+    width:100%;
+    height:100%;
+    max-width:640px;
+    margin:0 auto;
+    font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+}
+li{
+    list-style:none;
+}
+
+/*去除默认样式结束*/
+/*通用样式*/
+
+.wrap{
+    padding:0 18px;
+}
+
+/*头部样式开始*/
+footer{
+    height:64px;
+    padding-top:35px;
+    padding-bottom:15px;
+    border-bottom:1px solid #ebebeb;
+    text-align:center;
+    font-size:15px;
+}
+.header-number{
+    font-size:12px;
+}
+/*头部样式结束*/
+
+/*主题页面开始*/
+.content li{
+    padding-top:18px;
+    padding-bottom:18px;
+}
+.content-list-head{
+    
+}
+
+/*页脚样式开始*/
