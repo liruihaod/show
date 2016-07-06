@@ -139,11 +139,8 @@ button, input[type="input"] {
     margin-right:7px;
     font-size:10px;
 }
-.other-anser-number{
-    font-size:8px;
-}
-.other-fans span{
-    font-size:8px;
+.other-anser-number,.other-fans-number{
+    font-size:9px;
 }
 /*头部结束*/
 
@@ -252,6 +249,10 @@ section{
 /*奖励页面结束*/
 
 /*内容页面开始*/
+
+section{
+    padding-bottom:50px;
+}
 .content{
     margin-top:18px;
 
@@ -290,6 +291,9 @@ section{
 .list-other p{
     font-size:11px;
     color:#999;
+}
+.list-other p:nth-of-type(2){
+    font-size:8px;
 }
 .list-other-username{
     margin-bottom:2px;
@@ -349,7 +353,7 @@ section{
     color:#929292;
 }
 .response-time{
-    font-size:8px;
+    font-size:10px;
     line-height:16px;
 }
 .response-author:before{

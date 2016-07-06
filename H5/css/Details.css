@@ -129,17 +129,16 @@ header{
 }
 .level{
     position: absolute;
-    padding:0 6px;
+    padding:1px 7px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius:10px;
     left:74px;
-    top:1px;
+    top:0;
     background:#a6c5f9;
     color:#fff;
     font-size:8px;
-    height:17px;
-    line-height:17px;
+     margin-top:3px;
 }
 .list-right{
     float:right
@@ -148,6 +147,9 @@ header{
     color:#f66;
 }
 /*商家解答*/
+section{
+    padding-bottom:50px;
+}
 .content-response{
     background:#f2f7ff;
     padding:15px 20px;
@@ -201,22 +203,22 @@ header{
 footer{
     max-width:640px;
     margin:0 auto;
-    position: relative;
+    position:fixed;
+    bottom:0;
+    left:0;
 }
-.footer-overstory,.footer-substrate{
-    position: absolute;
-}
+
 footer .footer-overstory{
+    width:100%;
     background:#fff;
     height:48px;
     line-height:48px;
     font-size:14px;
-    position: fixed;
+    position:fixed;
     bottom:0;
     left:0;
     width:100%;
     z-index:2;
-    display: none;
 }
 footer .footer-overstory a{
     display: block;
@@ -227,10 +229,14 @@ footer .footer-overstory a{
     margin:0 auto;
 }
 footer .footer-substrate{
+    width:100%;
     background:black;
     height:43px;
     padding:3px 0 8px 11px;
     width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -243,7 +249,7 @@ footer .footer-substrate{
     background-position:-46px 0px;
     background-size:75px 29px;
     margin-right:8px;
-    margin-top:4px;
+    margin-top:2px;
 }
 .footer-speak-frame{
     float:left;

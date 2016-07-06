@@ -147,10 +147,7 @@ button, input[type="input"] {
     font-size:10px;
 }
 .other-anser-number{
-    font-size:8px;
-}
-.other-fans span{
-    font-size:8px;
+    font-size:9px;
 }
 /*头部结束*/
 
@@ -158,7 +155,7 @@ button, input[type="input"] {
 
 /*最新优惠页面开始*/
 section{
-    margin-bottom:62px;
+    padding-bottom:62px;
 }
 .privilege{
     margin-top:10px;
@@ -249,6 +246,9 @@ section{
 .list-other p{
     font-size:11px;
     color:#999;
+}
+.list-other p:nth-of-type(2){
+    font-size:8px;
 }
 .list-other-username{
     margin-bottom:2px;
