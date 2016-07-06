@@ -5,6 +5,7 @@ html,body,ul,li,p,h4,h5{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-weight: normal;
 }
 a{
     text-decoration: none;
@@ -20,18 +21,42 @@ html,body{
 li{
     list-style:none;
 }
+/*去除点击高亮效果*/
+a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+input::-moz-focus-inner{border:none;padding:0;}
+select, input{vertical-align:middle;}
 
+/*去除输入框默认样式*/
+button, input[type="input"] {
+
+    -webkit-appearance: none;
+
+}
 /*去除默认样式结束*/
 /*通用样式*/
 
 .wrap{
     padding:0 18px;
 }
-
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.content-interval{
+    height:14px;
+    background:#f7f7f7;
+}
+.attention-button{
+    display: block;
+    font-size:12px;
+    padding:6px 11px;
+    border:2px solid #f66;
+    color:#f66;
+}
 /*头部样式开始*/
-footer{
-    height:64px;
-    padding-top:35px;
+header{
+    padding-top:34px;
     padding-bottom:15px;
     border-bottom:1px solid #ebebeb;
     text-align:center;
@@ -43,12 +68,190 @@ footer{
 /*头部样式结束*/
 
 /*主题页面开始*/
-.content li{
+.content  .content-list-person,.content  .content-list-merchant{
     padding-top:18px;
     padding-bottom:18px;
 }
+/*个人提问*/
 .content-list-head{
-    
+   margin-bottom:17px;
 }
 
+.content-list-head .list-left{
+    float:left;
+}
+.content-list-head .list-right{
+    float:right;
+}
+.list-portrait{
+     width:34px;
+    height:34px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    float:left;
+    margin-right:12px;
+ }
+.list-portrait img{
+    width:100%;
+    height:100%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.list-other{
+    float:left;
+    position: relative;
+}
+.list-other p{
+    font-size:10px;
+    color:#999;
+}
+.list-other .list-other-username{
+    margin-bottom:2px;
+    color:#151515;
+    font-size:13px;
+}
+
+.content-query h5{
+    font-size:14px;
+    margin-bottom:20px;
+    font-weight:normal;
+    color:#151515;
+}
+
+.content-illustration{
+    margin:0 auto;
+}
+.content-illustration img{
+    width:100%;
+    height:100%;
+}
+.level{
+    position: absolute;
+    padding:0 6px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    left:74px;
+    top:1px;
+    background:#a6c5f9;
+    color:#fff;
+    font-size:8px;
+    height:17px;
+    line-height:17px;
+}
+.list-right{
+    float:right
+}
+.list-right a{
+    color:#f66;
+}
+/*商家解答*/
+.content-response{
+    background:#f2f7ff;
+    padding:15px 20px;
+    font-size:14px;
+    color:#151515;
+    margin-bottom:13px;
+    font-weight: normal;
+}
+.content-inquiry {
+    background:#f2f7ff;
+    padding:15px 20px;
+    font-size:14px;
+    color:#151515;
+    font-weight: normal;
+}
+.content-advertisement{
+    padding:14px 14px 17px 5px;
+    background:#f3f3f3;
+}
+
+.content-advertisement-picture{
+    width:55px;
+    height:55px;
+    float:left;
+    margin-right:11px;
+    margin-top:-9px;
+}
+
+.content-advertisement-picture a{
+    width:100%;
+    height:100%;
+    display: block;
+}
+
+.content-advertisement-picture img{
+    width:100%;
+    height:100%;
+}
+
+.content-voice{
+    width:155px;
+    height:45px;
+    line-height:45px;
+    padding-left:17px;
+    color:#464646;
+    background:#f3f3f3;
+    font-size:13px;
+}
 /*页脚样式开始*/
+
+footer{
+    max-width:640px;
+    margin:0 auto;
+    position: relative;
+}
+.footer-overstory,.footer-substrate{
+    position: absolute;
+}
+footer .footer-overstory{
+    background:#fff;
+    height:48px;
+    line-height:48px;
+    font-size:14px;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:2;
+    display: none;
+}
+footer .footer-overstory a{
+    display: block;
+    text-align: center;
+    max-width:640px;
+    color:white;
+    background:#f66;
+    margin:0 auto;
+}
+footer .footer-substrate{
+    background:black;
+    height:43px;
+    padding:3px 0 8px 11px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.footer-speak-icon{
+    float:left;
+    width:30px;
+    height:30px;
+    background:url(../image/result.png) no-repeat;
+    background-position:-46px 0px;
+    background-size:75px 29px;
+    margin-right:8px;
+    margin-top:4px;
+}
+.footer-speak-frame{
+    float:left;
+    height:100%;
+    width:35%;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    border:none;
+    padding-left:30px;
+}
