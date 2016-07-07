@@ -49,7 +49,7 @@ button, input[type="input"] {
 }
 .main{
     top:0px;
-    bottom:50px;
+    bottom:48px;
     position: absolute;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;

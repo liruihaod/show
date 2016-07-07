@@ -36,7 +36,7 @@ button, input[type="input"] {
 /*通用样式*/
 .main{
     top:0px;
-    bottom:50px;
+    bottom:48px;
     position: absolute;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;

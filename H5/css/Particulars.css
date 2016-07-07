@@ -34,14 +34,6 @@ button, input[type="input"] {
 
 }
 /*通用样式*/
-.wrap{
-    padding:0 18px;
-}
-.clearfix:after{
-    content:"";
-    display:block;
-    clear:both;
-}
 
 /*头部样式开始*/
 .header{
@@ -69,7 +61,7 @@ button, input[type="input"] {
 /*头部样式结束*/
 
 /*主体页面开始*/
-.scetion{
+.section{
     padding:0 18px;
 }
 .content{
