@@ -1,5 +1,5 @@
 /**去除默认样式**/
-html,body,ul,li,p,h4,h5{
+html,body,ul,li,p,h4,h5,strong{
     padding:0;
     margin:0;
     -webkit-box-sizing: border-box;
@@ -17,6 +17,7 @@ html,body{
     max-width:640px;
     margin:0 auto;
     font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+    background:#f7f7f7;
 }
 li{
     list-style:none;
@@ -38,15 +39,7 @@ button, input[type="input"] {
 .wrap{
     padding:0 18px;
 }
-.clearfix:after{
-    content:"";
-    display:block;
-    clear:both;
-}
-.content-interval{
-    height:14px;
-    background:#f7f7f7;
-}
+
 .attention-button{
     display: block;
     font-size:12px;
@@ -54,13 +47,21 @@ button, input[type="input"] {
     border:2px solid #f66;
     color:#f66;
 }
+.main{
+    top:0px;
+    bottom:50px;
+    position: absolute;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 /*头部样式开始*/
-header{
-    padding-top:34px;
+.header{
+    padding-top:25px;
     padding-bottom:15px;
     border-bottom:1px solid #ebebeb;
     text-align:center;
     font-size:15px;
+    background:white;
 }
 .header-number{
     font-size:12px;
@@ -69,14 +70,21 @@ header{
 
 /*主题页面开始*/
 .content  .content-list-person,.content  .content-list-merchant{
-    padding-top:18px;
-    padding-bottom:18px;
+    padding:18px;
 }
 /*个人提问*/
+.content li{
+    margin-top:14px;
+    background:white;
+}
 .content-list-head{
    margin-bottom:17px;
 }
-
+.content-list-head:after{
+    content:"";
+    display:block;
+    clear:both;
+}
 .content-list-head .list-left{
     float:left;
 }
@@ -86,34 +94,40 @@ header{
 .list-portrait{
      width:34px;
     height:34px;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
     float:left;
     margin-right:12px;
  }
 .list-portrait img{
     width:100%;
     height:100%;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
 }
 .list-other{
     float:left;
     position: relative;
 }
-.list-other p{
+.list-other:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.list-other{
     font-size:10px;
     color:#999;
 }
 .list-other .list-other-username{
+    display: block;
     margin-bottom:2px;
-    color:#151515;
+    color:#666;
     font-size:13px;
 }
 
-.content-query h5{
+.content-query strong{
     font-size:14px;
     margin-bottom:20px;
     font-weight:normal;
@@ -124,15 +138,14 @@ header{
     margin:0 auto;
 }
 .content-illustration img{
-    width:100%;
-    height:100%;
+   max-width:100%;
 }
 .level{
     position: absolute;
     padding:1px 7px;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
     left:74px;
     top:0;
     background:#a6c5f9;
@@ -147,10 +160,8 @@ header{
     color:#f66;
 }
 /*商家解答*/
-section{
-    padding-bottom:50px;
-}
 .content-response{
+    display: block;
     background:#f2f7ff;
     padding:15px 20px;
     font-size:14px;
@@ -158,8 +169,9 @@ section{
     margin-bottom:13px;
     font-weight: normal;
 }
-.content-inquiry {
-    background:#f2f7ff;
+.content-inquiry  span{
+    display: block;
+    background:#f3f3f3;
     padding:15px 20px;
     font-size:14px;
     color:#151515;
@@ -168,6 +180,11 @@ section{
 .content-advertisement{
     padding:14px 14px 17px 5px;
     background:#f3f3f3;
+}
+.content-advertisement:after{
+    content:"";
+    display:block;
+    clear:both;
 }
 
 .content-advertisement-picture{
@@ -200,27 +217,18 @@ section{
 }
 /*页脚样式开始*/
 
-footer{
-    max-width:640px;
-    margin:0 auto;
-    position:fixed;
-    bottom:0;
-    left:0;
-}
-
-footer .footer-overstory{
-    width:100%;
+/*页脚样式开始*/
+.footer{
     background:#fff;
     height:48px;
     line-height:48px;
     font-size:14px;
-    position:fixed;
+    position: fixed;
     bottom:0;
     left:0;
     width:100%;
-    z-index:2;
 }
-footer .footer-overstory a{
+.footer a{
     display: block;
     text-align: center;
     max-width:640px;
@@ -228,36 +236,4 @@ footer .footer-overstory a{
     background:#f66;
     margin:0 auto;
 }
-footer .footer-substrate{
-    width:100%;
-    background:black;
-    height:43px;
-    padding:3px 0 8px 11px;
-    width:100%;
-    position:fixed;
-    bottom:0;
-    left:0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.footer-speak-icon{
-    float:left;
-    width:30px;
-    height:30px;
-    background:url(../image/result.png) no-repeat;
-    background-position:-46px 0px;
-    background-size:75px 29px;
-    margin-right:8px;
-    margin-top:2px;
-}
-.footer-speak-frame{
-    float:left;
-    height:100%;
-    width:35%;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    border-radius:5px;
-    border:none;
-    padding-left:30px;
-}
+/*页脚样式结束*/

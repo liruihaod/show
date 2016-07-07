@@ -1,16 +1,18 @@
 /*去除默认样式*/
-html,body,ul,li,p,h4,h5{
+html,body,ul,li,p,h4,h5,strong{
     padding:0;
     margin:0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-weight: normal;
 }
 a{
     text-decoration: none;
     color:black;
 }
 html,body{
+    position: relative;
     width:100%;
     height:100%;
     max-width:640px;
@@ -32,8 +34,12 @@ button, input[type="input"] {
 
 }/*去除默认样式结束*/
 /*通用样式*/
-.wrap{
-    padding:0 18px;
+.main{
+    top:0px;
+    bottom:50px;
+    position: absolute;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 .userinfo-bottom{
     display: block;
@@ -59,20 +65,17 @@ button, input[type="input"] {
     border:1px solid #b6b6b6;
 }
 
-.clearfix:after{
-    display: block;
-    content:"";
-    clear:both;
-}
 /*头部样式开始*/
+
 .userinfo{
     position:relative;
-    padding-top:44px;
+    padding:44px 18px 0 18px;
 }
 .backdrop{
     height:120px;
     background:url(../image/bg-1.png) no-repeat;
     background-size:cover;
+    background-position:0 0;
 }
 .userinfo-portrait{
     width: 62px;
@@ -83,9 +86,9 @@ button, input[type="input"] {
     left:50%;
     transform:translateX(-50%);
     top:-31px;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
 
 }
 .userinfo-portrait .level{
@@ -96,11 +99,10 @@ button, input[type="input"] {
 
 }
 .userinfo-portrait img{
-    width:100%;
-    height:100%;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    max-width:100%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
 }
 /*用户信息内容*/
 .userinfo-username{
@@ -112,7 +114,7 @@ button, input[type="input"] {
     margin-top:13px;
     font-size:13px;
     color:red;
-    display: block;
+    text-align: center;
 
 }
 .userinfo-attention span{
@@ -131,15 +133,24 @@ button, input[type="input"] {
     margin-top:17px;
     padding-bottom:15px;
 }
+.userinfo-other:after{
+    display: block;
+    content:"";
+    clear:both;
+}
 .other-answer,.other-fans{
     float:left;
     margin-right:8px;
 }
-.other-fans-icon,.other-answer-icon{
+.other-icon{
     margin-right:7px;
     font-size:10px;
+    display: inline-block;
+    color:#b6b6b6;
+    padding:3px 9px;
+    border:1px solid #b6b6b6;
 }
-.other-anser-number,.other-fans-number{
+.other-number{
     font-size:9px;
 }
 /*头部结束*/
@@ -147,22 +158,26 @@ button, input[type="input"] {
 /*主体页面开始*/
 
 /*最新优惠页面开始*/
-section{
-    margin-bottom:62px;
-}
 .privilege{
     margin-top:10px;
-    padding-top:12px;
-    padding-bottom:17px;
+    padding:12px 18px 17px 18px;
 }
 .privilege-head{
     padding-bottom:9px;
     border-bottom:1px dashed #e2e2e2;
     color:#666;
 }
+.privilege-head:after{
+    content:"";
+    display:block;
+    clear:both;
+}
 .privilege-head-left{
     font-size:14px;
     float:left;
+}
+.privilege-head-left a{
+    color:#666;
 }
 .privilege-head-right{
     font-size:12px;
@@ -175,6 +190,14 @@ section{
     margin-top:16px;
     position: relative;
 }
+.privilege-main:after{
+    display:block;
+    content:"";
+    clear:both;
+}
+.privilege-text-top strong{
+    font-size:13px;
+}
 .privilege-main-picture{
     width:55px;
     height:55px;
@@ -185,7 +208,10 @@ section{
     width:100%;
     height:100%;
 }
-.privilege-main-text{
+.privilege-main-text:after{
+    display:block;
+    content:"";
+    clear:both;
 }
 .privilege-text-bottom{
     float:left;
@@ -194,25 +220,21 @@ section{
     bottom:0;
     left:72px;
 }
-.privilege-main-text-top{
-    margin-bottom:12px;
-    font-size:14px;
-    float:left;
-}
 /*最新优惠结束*/
 
 /*奖励样式开始*/
 .award{
     margin-top:16px;
     pading-top:13px;
-    padding-bottom:12px;
+    padding:13px 18px 12px 18px;
+    margin-bottom:40px;
 }
 .award-icon{
     width:40px;
     height:40px;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
     background:#a6c5f9;
     font-size:17px;
     color:white;
@@ -224,15 +246,28 @@ section{
 .award-message{
     margin-bottom:15px;
 }
-.award-message span{
-    font-size:11px;
-    color:#7f7f7f;
+
+.award-message.change{
+    height:40px;
+    overflow:hidden;
 }
-.award-name{
-    margin-right:10px;
+
+.award-conent:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.award-conent li {
+    height:20px;
+    line-height:20px;
+    display:inline;
+    font-size:13px;
+    color:#7f7f7f;
+    word-break:break-all;
 }
 .award-number{
-    font-size:9px;
+    margin-left:8px;
+    font-size:13px;
 }
 .award-unit{
     margin-right:5px;
@@ -245,21 +280,20 @@ section{
     background-position:0px 0px;
     background-size:75px 29px;
     margin:0 auto;
+
 }
 /*奖励页面结束*/
 
 /*内容页面开始*/
 
-section{
-    padding-bottom:50px;
-}
 .content{
     margin-top:18px;
 
 }
 .content-list{
-    margin-bottom:14px;
     margin-top:17px;
+    padding:0 18px 14px 18px;
+    border-bottom:1px solid #eee;
 }
 
 .content-list-head{
@@ -272,36 +306,30 @@ section{
 .list-portrait{
     width:34px;
     height:34px;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
     float:left;
     margin-right:12px;
 }
 .list-portrait img{
-    width:100%;
-    height:100%;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    max-width:100%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px;
 }
 .list-other{
     float:left;
-}
-.list-other p{
     font-size:11px;
     color:#999;
 }
-.list-other p:nth-of-type(2){
-    font-size:8px;
+.list-other .list-other-time{
+    font-size:10px;
 }
 .list-other-username{
+    display: block;
     margin-bottom:2px;
     color:#8a8a8a;
-}
-.list-other-time{
-    font-size:8px;
-    color:#aaa;
 }
 
 .list-right{
@@ -313,13 +341,14 @@ section{
     color:#f66;
 }
 .list-help{
-    font-size:9px;
+    font-size:11px;
 }
 .list-right{
-    font-size:10px;
+    font-size:11px;
 }
 
-.content-title h4{
+.content-title strong{
+    display: block;
     font-size:15px;
     margin-bottom:15px;
     font-weight:normal;
@@ -341,10 +370,15 @@ section{
     float:left;
 }
 .response-head{
-    font-size:10px;
+    font-size:11px;
     margin-bottom:12px;
 }
-.response-head p{
+.response-head:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.response-head{
     color:#aaa;
 }
 .response-author{
@@ -353,7 +387,7 @@ section{
     color:#929292;
 }
 .response-time{
-    font-size:10px;
+    font-size:11px;
     line-height:16px;
 }
 .response-author:before{
@@ -361,16 +395,16 @@ section{
     display: block;
     width:14px;
     height:14px;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    -webkit-border-radius:50px 50px 50px 50px;
+    -moz-border-radius:50px 50px 50px 50px;
+    border-radius:50px 50px 50px 50px ;
     text-align: center;
     line-height:14px;
     position:absolute;
     background:#ffa760;
     color:white;
     left:-22px;
-    top:0px;
+    top:2px;
 }
 .response-main{
     font-size:12px;
@@ -389,7 +423,7 @@ footer{
     height:48px;
     line-height:48px;
     font-size:14px;
-    position: fixed;
+    position:absolute;
     bottom:0;
     left:0;
     width:100%;

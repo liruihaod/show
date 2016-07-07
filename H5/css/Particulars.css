@@ -44,11 +44,16 @@ button, input[type="input"] {
 }
 
 /*头部样式开始*/
-header{
+.header{
     border-bottom:1px solid #ebebeb;
     text-align:center;
     font-size:15px;
-    padding:34px 18px 15px 18px;
+    padding:25px 18px 15px 18px;
+}
+.header:after{
+    display: block;
+    content:"";
+    clear:both;
 }
 .header-title{
     line-height: 20px;
@@ -64,6 +69,9 @@ header{
 /*头部样式结束*/
 
 /*主体页面开始*/
+.scetion{
+    padding:0 18px;
+}
 .content{
     padding-top:18px;
 }

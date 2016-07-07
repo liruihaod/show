@@ -1,4 +1,44 @@
 (function(){
+
+    //判断悬赏列表
+    var conentH=$(".award-conent").height();//内容宽度
+        //messageH=$(".award-message").height();//容器高度
+
+
+
+
+
+    var Judge=function($node,height){
+        this.node=$node;
+        this.nodeH=this.node.height();
+        this.height=height;
+        this.next=this.node.siblings(".award-next")
+
+    }
+    Judge.prototype={
+        init:function (){
+            var _this=this;
+            if(_this.nodeH>_this.height){
+                _this.node.addClass("change");
+                _this.next.show();
+            }else{
+                _this.node.addClass("change");
+                _this.next.hide();
+            }
+            _this.bind();
+        },
+        bind:function(){
+            var _this=this;
+            _this.next.on("tap",function(e){
+                e.preventDefault();
+                _this.node.removeClass("change");
+                _this.next.hide();
+            })
+        }
+    }
+
+    new Judge($(".award-message"),40).init();
+
     //点我提问
     $("footer a").on("tap",function(){
         var url=$(this).attr("url"),
@@ -27,4 +67,5 @@
             }
         }
     });
+
 })()
