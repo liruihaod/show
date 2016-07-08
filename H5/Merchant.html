@@ -8,6 +8,7 @@
 
 </head>
 <body>
+<main class="main">
     <!--头部开始-->
     <header>
         <div class="backdrop">
@@ -15,7 +16,7 @@
         <!--用户信息开始-->
         <div class="userinfo">
             <div class="userinfo-portrait">
-                <a href="#"><img src="image/icon.jpg" alt="个人头像"></a>
+                <a ><img src="image/icon.jpg" alt="个人头像"></a>
                 <div class="level userinfo-bottom">Lv.<span class="level-number">12</span></div>
             </div>
             <div class="userinfo-username">
@@ -25,7 +26,7 @@
             <div class="userinfo-aphorism">首创按小时烘焙品牌，每一口都新鲜出炉，好产品才是核心竞争力</div>
             <div class="userinfo-other">
                 <div class="other-answer">
-                    <a href="#" class="other-icon">
+                    <a  class="other-icon">
                         回答
                     </a>
                         <span class="other-number">
@@ -33,7 +34,7 @@
                         </span>
                 </div>
                 <div class="other-fans">
-                    <a  href="#" class="other-icon">
+                    <a   class="other-icon">
                         粉丝
                     </a>
                         <span class="other-number">
@@ -47,7 +48,7 @@
     <!--头部结束-->
 
     <!--主体页面开始-->
-    <section>
+    <section class="section">
         <!--最新优惠开始-->
         <div class="privilege">
             <div class="privilege-head">
@@ -97,7 +98,7 @@
                         <span>真心请教,有木有什么大直径的美瞳推荐结婚时戴啊?</span>
                     </div>
                     <!--<div class="content-illustration">-->
-                        <!--<img src="image/bg-2.png" alt="插图">-->
+                    <!--<img src="image/bg-2.png" alt="插图">-->
                     <!--</div>-->
                     <div class="content-response">
                         <div class="response-head">
@@ -107,7 +108,7 @@
                             <time class="response-time">1分钟前回答</time>
                         </div>
                         <div class="response-main">
-                           <span>300元也是可以做很多事情的啦，你可以考虑套系A,套系B，给你看看我们的样片。</span>
+                            <span>300元也是可以做很多事情的啦，你可以考虑套系A,套系B，给你看看我们的样片。</span>
                         </div>
                     </div>
                 </li>
@@ -215,6 +216,21 @@
         <!--内容页面结束-->
     </section>
     <!--主体页面结束-->
-
+</main>
+<!--遮罩层-->
+<div class="mask">
+    <div class="close" id="wclose">X</div>
+    <div class="mask-content">
+        <p id="ctext">点击右上角【在浏览器中打开】即可打开得意APP阅读完整内容</p>
+    </div>
+</div>
+<!--遮罩层结束-->
+<!--页脚页面开始-->
+<footer class="footer">
+    <a  id="download" href="javascript:void(0)" url="http://www.baidu.com">马上提问</a>
+</footer>
+<!--页脚页面结束-->
 </body>
+<script src="js/app/zepto.min.js"></script>
+<script src="js/Merchant.js"></script>
 </html>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+</style>
 <head>
 	<meta charset="UTF-8">
 	<title>问题详情</title>
@@ -47,7 +49,7 @@
 							<a class="list-other-username">薇拉摄影师</a>
 							<div class="level">lv.<span class="list-other-number">9</span></div>
 
-							<p><span class="list-other-time">1</span>分钟前</p></div>
+							<time><span class="list-other-time">1</span>分钟前</time></div>
 
 					</div>
 					<div class="list-right">
@@ -68,7 +70,7 @@
 					</div>
 					<div class="list-other">
 						<a class="list-other-username">小美爱旅行</a>
-						<p><span class="list-other-time">1</span>分钟前</p>
+						<time><span class="list-other-time">1</span>分钟前</time>
 					</div>
 				</div>
 				<div class="content-inquiry">
@@ -113,7 +115,8 @@
 						<time><span class="list-other-time">1</span>分钟前</time>
 					</div>
 				</div>
-				<div class="content-voice">
+				<div class="content-voice" >
+					<audio  audio-src="http://mr3.doubanio.com/66dc1e2ed7284422b814043d79f651dc/1/fm/song/p679549_128k.mp4" class="frame" loop="loop"></audio>
 					<span>30”</span>
 				</div>
 			</li>
@@ -122,13 +125,31 @@
 	<!-- 主题页面结束 -->
 </main>
 <!-- 页脚开始 -->
+<!--遮罩层-->
+<div class="mask">
+	<div class="close" id="wclose">X</div>
+	<div class="mask-content">
+		<p id="ctext">点击右上角【在浏览器中打开】即可打开得意APP阅读完整内容</p>
+	</div>
+</div>
+<!--遮罩层结束-->
 <footer class="footer">
 		<a href="javascript:void(0)">马上提问</a>
+
 </footer>
 <!-- 页脚结束 -->
 <!--提示下载开始-->
 
+
 </body>
 <script src="js/app/zepto.min.js"></script>
 <script src="js/Details.js"></script>
+<script>
+
+
+
+
+
+
+</script>
 </html>

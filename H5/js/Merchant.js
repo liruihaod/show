@@ -1,7 +1,7 @@
 (function(){
     //点我提问
     function appdownload(){
-        var url=$(this).attr("url"),
+        var url=$(".footer a").attr("url"),
             ua=navigator.userAgent,
             fallbackLink = 'http://www.deyi.com/app/download/index.html?from=appdownload',
             isiOS = /iP(?:ad|hone|od)/i.test(ua),
@@ -31,24 +31,7 @@
         }
 
     }
-    $(".footer a").on("tap",appdownload());
-    $(".list-right a").on("tap",appdownload());
+    $(".footer a").on("tap",function(){
 
-    //播放音乐
-    $(".content-voice").on("tap",function(){
-        var audioSrc=$(".content-voice .frame").attr("audio-src");
-        if(!$(this).data("key")){
-            $(this).data("key",true)
-            console.log("播放音乐");
-            if(!$(".content-voice .frame").attr("src")){
-                $(".content-voice .frame").attr("src",audioSrc);
-            }
-            $(".content-voice .frame")[0].play();
-        }else{
-            $(this).data("key",false);
-            $(".content-voice .frame")[0].pause();
-            console.log("停止播放")
-        }
-
-    })
+    });
 })()

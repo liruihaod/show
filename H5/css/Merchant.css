@@ -1,353 +1,377 @@
-/**去除默认样式**/
-html,body,ul,li,p,h4,h5,strong{
-    padding:0;
-    margin:0;
+@charset "UTF-8";
+.box-sizing, html, body, ul, li, p, h4, h5, strong {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.clearfix, .userinfo .userinfo-other:after, .section .privilege .privilege-head:after, .section .privilege .privilege-main:after, .content .content-communicate .content-list .content-response .response-head:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html, body, ul, li, p, h4, h5, strong {
+    padding: 0;
+    margin: 0;
     font-weight: normal;
 }
-a{
+
+a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
-html,body{
-    max-width:640px;
-    margin:0 auto;
-    font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
-    background:#f7f7f7;
+
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: "Helvetica", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background: #f7f7f7;
 }
-li{
-    list-style:none;
+
+li {
+    list-style: none;
 }
 
 /*去除点击高亮效果*/
-a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
-input::-moz-focus-inner{border:none;padding:0;}
-select, input{vertical-align:middle;}
+a, button, input, select, img, label {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    outline: medium none;
+}
+
+input::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+select, input {
+    vertical-align: middle;
+}
 
 /*去除输入框默认样式*/
 button, input[type="input"] {
-
     -webkit-appearance: none;
-
 }
 
 /*去除默认样式结束*/
-/*通用样式*/
-
-.userinfo-bottom{
-    display: block;
-    border:none;
-    padding:0 7px;
-    height:16px;
-    line-height: 16px;
-    background:#a6c5f9;
-    -webkit-border-radius:15px;
-    -moz-border-radius:15px;
-    border-radius:15px;
-}
-.attention-bottom{
-    display:inline-block;
-    padding:6px 25px;
-    border:1px solid #ff6666;
-    color:#ff7373;
-}
-
-.content-interval{
-    height:13px;
-    background:#f7f7f7;
-}
-/*头部样式开始*/
-.userinfo{
-    position:relative;
-    padding-top:44px;
-    padding:44px 18px 0 18px;
-}
-.backdrop{
-    height:120px;
-    background:url(../image/bg-1.png) no-repeat;
-    background-size:cover;
-    background-position:0 0;
-}
-.userinfo{
-    background:white;
-}
-.userinfo-portrait{
-    width: 62px;
-    height:62px;
-    padding:4px;
-    background:#fff;
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    top:-31px;
-    -webkit-border-radius:50px 50px 50px 50px;
-    -moz-border-radius:50px 50px 50px 50px;
-    border-radius:50px 50px 50px 50px;
-
-}
-.userinfo-portrait .level{
+/*头部开始*/
+.main {
+    top: 0px;
+    bottom: 48px;
     position: absolute;
-    bottom:8px;
-    left:55%;
-    font-size:8px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
+.backdrop {
+    height: 120px;
+    background: url(../image/bg-1.png) no-repeat;
+    background-size: cover;
+    background-position: 0 0;
 }
-.userinfo-portrait img{
-    width:100%;
-    height:100%;
-    -webkit-border-radius:50px 50px 50px 50px;
-    -moz-border-radius:50px 50px 50px 50px;
-    border-radius:50px 50px 50px 50px;
-}
-/*用户信息内容*/
-.userinfo-username{
-    font-size:16px;
-    text-align:center;
-    line-height:21px;
-}
-.userinfo-attention{
-    margin-top:13px;
-    font-size:13px;
-    color:red;
-    text-align: center;
 
-}
-.userinfo-attention span{
+.userinfo {
+    background: white;
     position: relative;
-    left:50%;
-    transform:translateX(-50%);
+    padding: 44px 18px 0 18px;
 }
-.userinfo-aphorism{
-    margin-top:14px;
-    font-size:14px;
-    color:#666;
-
+.userinfo .userinfo-portrait {
+    width: 62px;
+    height: 62px;
+    padding: 4px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -31px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
 }
-/*用户信息底部部分*/
-.userinfo-other{
-    margin-top:17px;
-    padding-bottom:15px;
+.userinfo .userinfo-portrait .level {
+    position: absolute;
+    bottom: 8px;
+    left: 55%;
+    font-size: 8px;
 }
-.userinfo-other:after{
+.userinfo .userinfo-portrait img {
+    max-width: 100%;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.userinfo .userinfo-portrait .userinfo-bottom {
     display: block;
-    content:"";
-    clear:both;
+    border: none;
+    padding: 0 7px;
+    height: 16px;
+    line-height: 16px;
+    background: #a6c5f9;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 }
-.other-answer,.other-fans{
-    float:left;
-    margin-right:8px;
+.userinfo .userinfo-username {
+    font-size: 16px;
+    text-align: center;
+    line-height: 21px;
 }
-.other-icon{
-    margin-right:7px;
-    font-size:10px;
+.userinfo .userinfo-attention {
+    margin-top: 13px;
+    font-size: 13px;
+    color: red;
+    text-align: center;
+}
+.userinfo .userinfo-attention span {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.userinfo .userinfo-attention span .attention-bottom {
     display: inline-block;
-    color:#b6b6b6;
-    padding:3px 9px;
-    border:1px solid #b6b6b6;
+    padding: 6px 25px;
+    border: 1px solid #ff6666;
+    color: #ff7373;
 }
-.other-number{
-    font-size:9px;
+.userinfo .userinfo-aphorism {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #666;
 }
-/*头部结束*/
-
-/*主体页面开始*/
+.userinfo .userinfo-other {
+    margin-top: 17px;
+    padding-bottom: 15px;
+}
+.userinfo .userinfo-other .other-answer {
+    float: left;
+    margin-right: 8px;
+}
+.userinfo .userinfo-other .other-fans {
+    float: left;
+    margin-right: 8px;
+}
+.userinfo .userinfo-other .other-icon {
+    margin-right: 7px;
+    font-size: 10px;
+    display: inline-block;
+    color: #b6b6b6;
+    padding: 3px 9px;
+    border: 1px solid #b6b6b6;
+}
+.userinfo .userinfo-other .other-number {
+    font-size: 9px;
+}
 
 /*最新优惠页面开始*/
-.privilege{
-    margin-top:10px;
-    padding:12px 18px 17px 18px;
-    background:white;
+.section .privilege {
+    margin-top: 10px;
+    padding: 12px 18px 17px 18px;
+    background: white;
 }
-.privilege-head{
-    padding-bottom:9px;
-    border-bottom:1px dashed #e2e2e2;
-    color:#666;
+.section .privilege .privilege-head {
+    padding-bottom: 9px;
+    border-bottom: 1px dashed #e2e2e2;
+    color: #666;
 }
-.privilege-head:after{
-    content:"";
-    display:block;
-    clear:both;
+.section .privilege .privilege-head .privilege-head-left {
+    font-size: 14px;
+    float: left;
 }
-.privilege-head-left{
-    font-size:14px;
-    float:left;
+.section .privilege .privilege-head .privilege-head-right {
+    font-size: 12px;
+    float: right;
 }
-.privilege-head-right{
-    font-size:12px;
-    float:right;
+.section .privilege .privilege-head .privilege-head-right a {
+    color: #8a8a8a;
 }
-.privilege-head-right a{
-    color:#8a8a8a;
-}
-.privilege-main{
-    margin-top:16px;
+.section .privilege .privilege-main {
+    margin-top: 16px;
     position: relative;
 }
-.privilege-main:after{
-    content:"";
-    display: block;
-    clear:both;
+.section .privilege .privilege-main .privilege-main-picture {
+    width: 55px;
+    height: 55px;
+    float: left;
+    margin-right: 18px;
 }
-.privilege-main-picture{
-    width:55px;
-    height:55px;
-    float:left;
-    margin-right:18px;
+.section .privilege .privilege-main .privilege-main-picture img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
-.privilege-main-picture img{
-    width:100%;
-    height:100%;
+.section .privilege .privilege-main .privilege-main-text .privilege-text-top {
+    font-size: 14px;
 }
-.privilege-text-bottom{
-    float:left;
-    font-size:9px;
+.section .privilege .privilege-main .privilege-main-text .privilege-text-bottom {
+    float: left;
+    font-size: 11px;
     position: absolute;
-    bottom:0;
-    left:72px;
+    bottom: 0;
+    left: 72px;
 }
-.privilege-text-top{
-    font-size:13px;
-}
+
 /*最新优惠结束*/
-/*内容页面开始*/
-.content{
-    margin-top:18px;
+.mask {
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
-.content-communicate{
-    background:white;
-}
-.content-list{
-
-    padding:17px 18px 14px 18px;
-    border-top:1px solid #f7f7f7;
-}
-
-.content-list-head{
-    height:31px;
-    margin-bottom:18px;
-}
-.list-left{
-    float:left;
-}
-.list-left:after{
-    content:"";
-    display:block;
-    clear:both;
-
-}
-.list-portrait{
-    width:34px;
-    height:34px;
-    -webkit-border-radius:50px 50px 50px 50px;
-    -moz-border-radius:50px 50px 50px 50px;
-    border-radius:50px 50px 50px 50px;
-    float:left;
-    margin-right:12px;
-}
-.list-portrait img{
-    width:100%;
-    height:100%;
-    -webkit-border-radius:50px 50px 50px 50px;
-    -moz-border-radius:50px 50px 50px 50px;
-    border-radius:50px 50px 50px 50px;
-}
-
-.list-other{
-    float:left;
-    font-size:11px;
-    color:#999;
-}
-.list-other .list-other-time{
-    font-size:10px;
-}
-.list-other-username{
-    display:block;
-    margin-bottom:2px;
-    color:#8a8a8a;
-}
-
-.list-right{
-    float:right;
-    height:34px;
-    line-height:34px;
-}
-.list-right a{
-    color:#f66;
-}
-.list-help{
-    font-size:11px;
-}
-.list-right{
-    font-size:11px;
-}
-
-.content-title {
-    font-size:15px;
-    margin-bottom:15px;
-    font-weight:normal;
-}
-.content-illustration{
-    margin-bottom:14px;
-    margin:0 auto;
-    margin-bottom:13px;
-}
-.content-illustration img{
-    width:100%;
-    height:100%;
-}
-.content-response{
-    background:#f7f7f7;
-    padding:16px 16px 16px 34px;
-}
-.response-author,.response-time{
-    float:left;
-}
-.response-head{
-    font-size:11px;
-    margin-bottom:12px;
-}
-.response-head:after{
-    content:"";
-    display:block;
-    clear:both;
-}
-.response-head time{
-    color:#aaa;
-}
-.response-author{
-    margin-right:6px;
-    position: relative;
-    color:#929292;
-}
-.response-time{
-    font-size:11px;
-    line-height:16px;
-}
-.response-author:before{
-    content:"A";
-    display: block;
-    width:14px;
-    height:14px;
-    -webkit-border-radius:50px 50px 50px 50px;
-    -moz-border-radius:50px 50px 50px 50px;
-    border-radius:50px 50px 50px 50px;
+.mask .close {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: indianred;
     text-align: center;
-    line-height:14px;
-    position:absolute;
-    background:#ffa760;
-    color:white;
-    left:-22px;
-    top:2px;
+    line-height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    z-index: 12;
 }
-.response-main{
-    font-size:12px;
-    color:#727272;
+.mask .mask-content {
+    width: 75%;
+    overflow: hidden;
+    float: right;
 }
-.content-list-interval{
-    height:1px;
-    width:100%;
-    background:#eee;
+.mask .mask-content #ctext {
+    width: 80%;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 60px;
 }
-/*主体页面结束*/
+
+/*内容页面开始*/
+.content {
+    margin-top: 18px;
+}
+.content .content-communicate {
+    background: white;
+}
+.content .content-communicate .content-list {
+    padding: 17px 18px 14px 18px;
+    border-top: 1px solid #f7f7f7;
+}
+.content .content-communicate .content-list .content-list-head {
+    height: 31px;
+    margin-bottom: 18px;
+}
+.content .content-communicate .content-list .content-list-head .list-left {
+    float: left;
+}
+.content .content-communicate .content-list .content-list-head .list-left .list-portrait {
+    width: 34px;
+    height: 34px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    float: left;
+    margin-right: 12px;
+}
+.content .content-communicate .content-list .content-list-head .list-left .list-portrait img {
+    max-width: 100%;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+.content .content-communicate .content-list .content-list-head .list-left .list-other {
+    float: left;
+    font-size: 10px;
+    color: #999;
+}
+.content .content-communicate .content-list .content-list-head .list-left .list-other .list-other-username {
+    display: block;
+    margin-bottom: 2px;
+    color: #666;
+    font-size: 12px;
+}
+.content .content-communicate .content-list .content-list-head .list-right {
+    float: right;
+    height: 34px;
+    font-size: 11px;
+    line-height: 34px;
+}
+.content .content-communicate .content-list .content-list-head .list-right a {
+    color: #f66;
+}
+.content .content-communicate .content-list .content-title {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.content .content-communicate .content-list .content-response {
+    background: #f7f7f7;
+    padding: 16px 16px 16px 34px;
+}
+.content .content-communicate .content-list .content-response .response-head {
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+.content .content-communicate .content-list .content-response .response-head time {
+    color: #aaa;
+}
+.content .content-communicate .content-list .content-response .response-head .response-time {
+    float: left;
+    font-size: 11px;
+    line-height: 16px;
+}
+.content .content-communicate .content-list .content-response .response-head .response-author {
+    float: left;
+    margin-right: 6px;
+    position: relative;
+    color: #929292;
+}
+.content .content-communicate .content-list .content-response .response-head .response-author:before {
+    content: "A";
+    display: block;
+    width: 14px;
+    height: 14px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 14px;
+    position: absolute;
+    background: #ffa760;
+    color: white;
+    left: -22px;
+    top: 2px;
+}
+.content .content-communicate .content-list .content-response .response-main {
+    font-size: 12px;
+    color: #727272;
+}
+
+.footer {
+    background: #fff;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer a {
+    display: block;
+    text-align: center;
+    max-width: 640px;
+    color: white;
+    background: #f66;
+    margin: 0 auto;
+}

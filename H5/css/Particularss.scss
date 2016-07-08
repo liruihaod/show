@@ -1,0 +1,101 @@
+
+// 去除默认样式
+.box-sizing{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+@mixin radius($radius){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    border-radius:$radius;
+}
+$font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+
+html,body,ul,li,p,h4,h5,strong{
+    padding:0;
+    margin:0;
+    @extend  .box-sizing;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+body{
+    width:100%;
+    height:100%;
+    max-width:640px;
+    margin:0 auto;
+    font-family:$font-family;
+    background:#f7f7f7;
+}
+li{
+    list-style:none;
+}
+/*去除点击高亮效果*/
+a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+input::-moz-focus-inner{border:none;padding:0;}
+select, input{vertical-align:middle;}
+/*去除输入框默认样式*/
+button, input[type="input"] {
+
+    -webkit-appearance: none;
+
+}
+/*去除默认样式结束*/
+.header{
+    border-bottom:1px solid #ebebeb;
+    text-align:center;
+    font-size:15px;
+    padding:25px 18px 15px 18px;
+    background:white;
+    .header-title{
+        line-height: 20px;
+        height:20px;
+    }
+    .header-prev{
+        display: block;
+        float:left;
+        width:20px;
+        height:20px;
+        background:url(../image/result.png) no-repeat;
+        background-position:-23px 1px;
+        background-size:75px 29px;
+    }
+}
+// 头部样式结束
+/*主体页面开始*/
+.section{
+    padding:0 18px;
+    .content{
+        padding-top:18px;
+        .content-time{
+            font-size:9px;
+            color:#999;
+        }
+        .content-title{
+            margin-top:13px;
+            font-size:14px;
+            color:#151515;
+        }
+        .content-illustration{
+            .content-illustration-list{
+                margin-top:15px;
+                a{
+                    display:block;
+                    img{
+                        max-width:100%;
+                    }
+                }
+            }
+        }
+    }
+}

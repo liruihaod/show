@@ -1,0 +1,290 @@
+
+// 去除默认样式
+.box-sizing{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+@mixin radius($radius){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    border-radius:$radius;
+}
+
+$font-family:'Helvetica', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+
+html,body,ul,li,p,h4,h5,strong{
+    padding:0;
+    margin:0;
+    @extend  .box-sizing;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+html,body{
+    width:100%;
+    height:100%;
+    max-width:640px;
+    margin:0 auto;
+    font-family:$font-family;
+    background:#f7f7f7;
+}
+li{
+    list-style:none;
+}
+/*去除点击高亮效果*/
+a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+input::-moz-focus-inner{border:none;padding:0;}
+select, input{vertical-align:middle;}
+/*去除输入框默认样式*/
+button, input[type="input"] {
+
+    -webkit-appearance: none;
+
+}
+/*去除默认样式结束*/
+/*通用样式*/
+
+.attention-button{
+    display: block;
+    font-size:12px;
+    padding:6px 11px;
+    border:2px solid #f66;
+    color:#f66;
+}
+
+.main{
+    max-width:640px;
+    width:100%;
+    top:0px;
+    bottom:48px;
+    position: absolute;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*头部样式开始*/
+.header{
+    padding-top:25px;
+    padding-bottom:15px;
+    border-bottom:1px solid #ebebeb;
+    text-align:center;
+    font-size:15px;
+    background:white;
+    .header-number{
+        font-size:12px;
+    }
+}
+/*头部样式结束*/
+
+// 主体页面开始
+@mixin clearfix{
+    content:"";
+    display:block;
+    clear:both;
+}
+@mixin radius($radius: 50px){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    border-radius:$radius;
+}
+.content{
+    li{
+        margin-top:14px;
+        background:white;
+        padding:18px;
+        .content-list-head{
+            margin-bottom:17px;
+            &:after{
+                @extend  .clearfix
+            }
+            .list-left{
+                float:left;
+            }
+            .list-right{
+                float:right;
+                a{
+                    color:#f66;
+                }
+            }
+            .list-portrait{
+                height:34px;
+                width:34px;
+                float:left;
+                margin-right:12px;
+                @include  radius(50px);
+                img{
+                    max-width:100%;
+                    @include  radius(50px);
+                }
+            }
+            .list-other{
+                float:left;
+                position: relative;
+                font-size:10px;
+                color:#999;
+                &:after{
+                    @extend  .clearfix
+                }
+                .list-other-username{
+                    display: block;
+                    margin-bottom:2px;
+                    color:#666;
+                    font-size:12px;
+                }
+                .level{
+                    position: absolute;
+                    padding:1px 7px;
+                    left:74px;
+                    top:0;
+                    background:#a6c5f9;
+                    color:#fff;
+                    font-size:8px;
+                    margin-top:2px;
+                    @include  radius(50px)
+                }
+            }
+        }
+        .content-query{
+            strong{
+                font-size:14px;
+                margin-bottom:20px;
+                font-weight:normal;
+                color:#151515;
+            }
+
+        }
+        .content-illustration{
+            margin:0 auto;
+            img{
+                max-width:100%;
+            }
+
+        }
+        .content-response{
+            display: block;
+            background:#f2f7ff;
+            padding:15px 20px;
+            font-size:14px;
+            color:#151515;
+            margin-bottom:13px;
+            font-weight: normal;
+        }
+        .content-inquiry{
+            span{
+                display: block;
+                background:#f3f3f3;
+                padding:15px 20px;
+                font-size:14px;
+                color:#151515;
+                font-weight: normal;
+            }
+        }
+        .content-advertisement{
+            padding:14px 14px 17px 5px;
+            background:#f3f3f3;
+            &:after{
+                @extend .clearfix;
+            }
+            .content-advertisement-picture{
+                width:55px;
+                height:55px;
+                float:left;
+                margin-right:11px;
+                margin-top:-9px;
+                a{
+                    width:100%;
+                    heigth:100%;
+                    display: block;
+                    img{
+                        max-width:100%;
+                    }
+                }
+
+            }
+        }
+        .content-voice{
+            width:155px;
+            height:45px;
+            line-height:45px;
+            padding-left:17px;
+            color:#464646;
+            background:#f3f3f3;
+            font-size:13px;
+            .frame{
+                width:0;
+                height:0;
+                position:absolute;
+            }
+        }
+    }
+
+}
+
+.mask{
+    position: fixed;
+    background:#000;
+    top:0;
+    left:0;
+    opacity:0.8;
+    z-index:11;
+    width:100%;
+    height:100%;
+    display:none;
+    .close{
+        width:30px;
+        height:30px;
+        background:#fff;
+        color:indianred;
+        text-align:center;
+        line-height:30px;
+        @include radius(15px);
+        position: absolute;
+        left:20px;
+        top:20px;
+        font-size:20px;
+        z-index:12;
+    }
+    .mask-content{
+        width:75%;
+        overflow: hidden;
+        float:right;
+        #ctext{
+            width:80%;
+            color:white;
+            text-align:center;
+            font-size:18px;
+            float:right;
+            margin-right:40px;
+            margin-top:60px;
+        }
+    }
+}
+// 页脚开始
+.footer{
+    background:#fff;
+    height:48px;
+    line-height:48px;
+    font-size:14px;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    a{
+        display: block;
+        text-align: center;
+        max-width:640px;
+        color:white;
+        background:#f66;
+        margin:0 auto;
+    }
+}

@@ -50,14 +50,17 @@
             start = new Date();
 
         if(inWeixin){
-            console.log("微信");
+            $(".mask").show();
+            $(".close").on("click",function(){
+                $(".mask").hide();
+            })
         }else if(isiOS || isAndroid){
             setTimeout(function(){
                 if(!isiOS && new Date() - start > 2100){
                     return;
                 }
                 window.location.href=fallbackLink;
-            },1000);
+            },2000);
             if(isiOS){
                 fallbackLink =fallbackLink;
                 window.location.href = 'deyiweb://' + url;
