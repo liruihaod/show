@@ -1,377 +1,381 @@
 @charset "UTF-8";
 .box-sizing, html, body, ul, li, p, h4, h5, strong {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .clearfix, .userinfo .userinfo-other:after, .section .privilege .privilege-head:after, .section .privilege .privilege-main:after, .content .content-communicate .content-list .content-response .response-head:after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 html, body, ul, li, p, h4, h5, strong {
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    font-family: "Helvetica", "Microsoft YaHei", "Helvetica Neue", sans-serif;
-    background: #f7f7f7;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: "Helvetica", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  background: #f7f7f7;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 /*去除点击高亮效果*/
 a, button, input, select, img, label {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: transparent;
-    outline: medium none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: medium none;
 }
 
 input::-moz-focus-inner {
-    border: none;
-    padding: 0;
+  border: none;
+  padding: 0;
 }
 
 select, input {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*去除输入框默认样式*/
 button, input[type="input"] {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /*去除默认样式结束*/
 /*头部开始*/
 .main {
-    top: 0px;
-    bottom: 48px;
-    position: absolute;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+  max-width: 640px;
+  width: 100%;
+  top: 0px;
+  bottom: 48px;
+  position: absolute;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .backdrop {
-    height: 120px;
-    background: url(../image/bg-1.png) no-repeat;
-    background-size: cover;
-    background-position: 0 0;
+  height: 120px;
+  background: url(../image/bg-1.png) no-repeat;
+  background-size: cover;
+  background-position: 0 0;
 }
 
 .userinfo {
-    background: white;
-    position: relative;
-    padding: 44px 18px 0 18px;
+  background: white;
+  position: relative;
+  padding: 44px 18px 0 18px;
 }
 .userinfo .userinfo-portrait {
-    width: 62px;
-    height: 62px;
-    padding: 4px;
-    background: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -31px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+  width: 62px;
+  height: 62px;
+  padding: 4px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -31px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 .userinfo .userinfo-portrait .level {
-    position: absolute;
-    bottom: 8px;
-    left: 55%;
-    font-size: 8px;
+  position: absolute;
+  bottom: 8px;
+  left: 55%;
+  font-size: 8px;
 }
 .userinfo .userinfo-portrait img {
-    max-width: 100%;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+  max-width: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 .userinfo .userinfo-portrait .userinfo-bottom {
-    display: block;
-    border: none;
-    padding: 0 7px;
-    height: 16px;
-    line-height: 16px;
-    background: #a6c5f9;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+  display: block;
+  border: none;
+  padding: 0 7px;
+  height: 16px;
+  line-height: 16px;
+  background: #a6c5f9;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 .userinfo .userinfo-username {
-    font-size: 16px;
-    text-align: center;
-    line-height: 21px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 21px;
 }
 .userinfo .userinfo-attention {
-    margin-top: 13px;
-    font-size: 13px;
-    color: red;
-    text-align: center;
+  margin-top: 13px;
+  font-size: 12px;
+  color: red;
+  text-align: center;
 }
-.userinfo .userinfo-attention span {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.userinfo .userinfo-attention span .attention-bottom {
-    display: inline-block;
-    padding: 6px 25px;
-    border: 1px solid #ff6666;
-    color: #ff7373;
+.userinfo .userinfo-attention .attention-bottom {
+  display: inline-block;
+  padding: 6px 25px;
+  border: 1px solid #ff6666;
+  color: #ff7373;
 }
 .userinfo .userinfo-aphorism {
-    margin-top: 14px;
-    font-size: 14px;
-    color: #666;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #666;
 }
 .userinfo .userinfo-other {
-    margin-top: 17px;
-    padding-bottom: 15px;
+  margin-top: 17px;
+  padding-bottom: 15px;
 }
 .userinfo .userinfo-other .other-answer {
-    float: left;
-    margin-right: 8px;
+  float: left;
+  margin-right: 8px;
 }
 .userinfo .userinfo-other .other-fans {
-    float: left;
-    margin-right: 8px;
+  float: left;
+  margin-right: 8px;
 }
 .userinfo .userinfo-other .other-icon {
-    margin-right: 7px;
-    font-size: 10px;
-    display: inline-block;
-    color: #b6b6b6;
-    padding: 3px 9px;
-    border: 1px solid #b6b6b6;
+  margin-right: 7px;
+  font-size: 10px;
+  display: inline-block;
+  color: #b6b6b6;
+  padding: 3px 9px;
+  border: 1px solid #b6b6b6;
 }
 .userinfo .userinfo-other .other-number {
-    font-size: 9px;
+  font-size: 9px;
 }
 
 /*最新优惠页面开始*/
 .section .privilege {
-    margin-top: 10px;
-    padding: 12px 18px 17px 18px;
-    background: white;
+  margin-top: 10px;
+  padding: 12px 18px 17px 18px;
+  background: white;
 }
 .section .privilege .privilege-head {
-    padding-bottom: 9px;
-    border-bottom: 1px dashed #e2e2e2;
-    color: #666;
+  padding-bottom: 9px;
+  border-bottom: 1px dashed #e2e2e2;
+  color: #666;
 }
 .section .privilege .privilege-head .privilege-head-left {
-    font-size: 14px;
-    float: left;
+  font-size: 14px;
+  float: left;
 }
 .section .privilege .privilege-head .privilege-head-right {
-    font-size: 12px;
-    float: right;
+  font-size: 12px;
+  float: right;
 }
 .section .privilege .privilege-head .privilege-head-right a {
-    color: #8a8a8a;
+  color: #8a8a8a;
 }
 .section .privilege .privilege-main {
-    margin-top: 16px;
-    position: relative;
+  margin-top: 16px;
+  position: relative;
 }
-.section .privilege .privilege-main .privilege-main-picture {
-    width: 55px;
-    height: 55px;
-    float: left;
-    margin-right: 18px;
+.section .privilege .privilege-main a {
+  display: block;
 }
-.section .privilege .privilege-main .privilege-main-picture img {
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
+.section .privilege .privilege-main a .privilege-main-picture {
+  display: block;
+  width: 55px;
+  height: 55px;
+  float: left;
+  margin-right: 18px;
 }
-.section .privilege .privilege-main .privilege-main-text .privilege-text-top {
-    font-size: 14px;
+.section .privilege .privilege-main a .privilege-main-picture img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
-.section .privilege .privilege-main .privilege-main-text .privilege-text-bottom {
-    float: left;
-    font-size: 11px;
-    position: absolute;
-    bottom: 0;
-    left: 72px;
+.section .privilege .privilege-main a .privilege-main-text {
+  display: block;
+}
+.section .privilege .privilege-main a .privilege-main-text .privilege-text-top {
+  font-size: 14px;
+}
+.section .privilege .privilege-main a .privilege-main-text .privilege-text-bottom {
+  display: block;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  left: 72px;
 }
 
 /*最新优惠结束*/
 .mask {
-    position: fixed;
-    background: #000;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-    z-index: 11;
-    width: 100%;
-    height: 100%;
-    display: none;
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 .mask .close {
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    color: indianred;
-    text-align: center;
-    line-height: 30px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    font-size: 20px;
-    z-index: 12;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  color: indianred;
+  text-align: center;
+  line-height: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 20px;
+  z-index: 12;
 }
 .mask .mask-content {
-    width: 75%;
-    overflow: hidden;
-    float: right;
+  width: 75%;
+  overflow: hidden;
+  float: right;
 }
 .mask .mask-content #ctext {
-    width: 80%;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    float: right;
-    margin-right: 40px;
-    margin-top: 60px;
+  width: 80%;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 60px;
 }
 
 /*内容页面开始*/
 .content {
-    margin-top: 18px;
+  margin-top: 18px;
 }
 .content .content-communicate {
-    background: white;
+  background: white;
 }
 .content .content-communicate .content-list {
-    padding: 17px 18px 14px 18px;
-    border-top: 1px solid #f7f7f7;
+  padding: 17px 18px 14px 18px;
+  border-top: 1px solid #f7f7f7;
 }
 .content .content-communicate .content-list .content-list-head {
-    height: 31px;
-    margin-bottom: 18px;
+  height: 31px;
+  margin-bottom: 18px;
 }
 .content .content-communicate .content-list .content-list-head .list-left {
-    float: left;
+  float: left;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-portrait {
-    width: 34px;
-    height: 34px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    float: left;
-    margin-right: 12px;
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  float: left;
+  margin-right: 12px;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-portrait img {
-    max-width: 100%;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+  max-width: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-other {
-    float: left;
-    font-size: 10px;
-    color: #999;
+  float: left;
+  font-size: 10px;
+  color: #999;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-other .list-other-username {
-    display: block;
-    margin-bottom: 2px;
-    color: #666;
-    font-size: 12px;
+  display: block;
+  margin-bottom: 2px;
+  color: #666;
+  font-size: 12px;
 }
 .content .content-communicate .content-list .content-list-head .list-right {
-    float: right;
-    height: 34px;
-    font-size: 11px;
-    line-height: 34px;
+  float: right;
+  height: 34px;
+  font-size: 11px;
+  line-height: 34px;
 }
 .content .content-communicate .content-list .content-list-head .list-right a {
-    color: #f66;
+  color: #f66;
 }
 .content .content-communicate .content-list .content-title {
-    font-size: 15px;
-    margin-bottom: 15px;
-    font-weight: normal;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-weight: normal;
 }
 .content .content-communicate .content-list .content-response {
-    background: #f7f7f7;
-    padding: 16px 16px 16px 34px;
+  background: #f7f7f7;
+  padding: 16px 16px 16px 34px;
 }
 .content .content-communicate .content-list .content-response .response-head {
-    font-size: 11px;
-    margin-bottom: 12px;
+  font-size: 11px;
+  margin-bottom: 12px;
 }
 .content .content-communicate .content-list .content-response .response-head time {
-    color: #aaa;
+  color: #aaa;
 }
 .content .content-communicate .content-list .content-response .response-head .response-time {
-    float: left;
-    font-size: 11px;
-    line-height: 16px;
+  float: left;
+  font-size: 11px;
+  line-height: 16px;
 }
 .content .content-communicate .content-list .content-response .response-head .response-author {
-    float: left;
-    margin-right: 6px;
-    position: relative;
-    color: #929292;
+  float: left;
+  margin-right: 6px;
+  position: relative;
+  color: #929292;
 }
 .content .content-communicate .content-list .content-response .response-head .response-author:before {
-    content: "A";
-    display: block;
-    width: 14px;
-    height: 14px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    text-align: center;
-    line-height: 14px;
-    position: absolute;
-    background: #ffa760;
-    color: white;
-    left: -22px;
-    top: 2px;
+  content: "A";
+  display: block;
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 14px;
+  position: absolute;
+  background: #ffa760;
+  color: white;
+  left: -22px;
+  top: 1px;
 }
 .content .content-communicate .content-list .content-response .response-main {
-    font-size: 12px;
-    color: #727272;
+  font-size: 13px;
+  color: #727272;
 }
 
 .footer {
-    background: #fff;
-    height: 48px;
-    line-height: 48px;
-    font-size: 14px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background: #fff;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .footer a {
-    display: block;
-    text-align: center;
-    max-width: 640px;
-    color: white;
-    background: #f66;
-    margin: 0 auto;
+  display: block;
+  text-align: center;
+  max-width: 640px;
+  color: white;
+  background: #f66;
+  margin: 0 auto;
 }

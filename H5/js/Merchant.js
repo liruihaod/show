@@ -1,7 +1,7 @@
 (function(){
     //点我提问
     function appdownload(){
-        var url=$(".footer a").attr("url"),
+        var url=$(".footer a").attr("url");
             ua=navigator.userAgent,
             fallbackLink = 'http://www.deyi.com/app/download/index.html?from=appdownload',
             isiOS = /iP(?:ad|hone|od)/i.test(ua),
@@ -31,7 +31,11 @@
         }
 
     }
-    $(".footer a").on("tap",function(){
+    $(".footer a").on("tap",appdownload);
+    $(".list-right a").on("tap",appdownload);
+    $(".attention-buttom").on("tap",appdownload);
+    $(".list-other-username").on("tap",appdownload);
+    $(".list-portrait a").on("tap",appdownload);
+    $(".list-other-username").on("tap",appdownload);
 
-    });
 })()

@@ -1,431 +1,440 @@
 @charset "UTF-8";
 .box-sizing, html, body, ul, li, p, h4, h5, strong {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .clearfix, .header .userinfo .userinfo-other:after, .section .privilege .privilege-head:after, .section .privilege .privilege-main:after, .section .privilege .privilege-main .privilege-main-text:after, .section .award .award-message .award-conent:after, .content .content-communicate .content-list .content-response .response-head:after {
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 html, body, ul, li, p, h4, h5, strong {
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    font-family: "Helvetica", "Microsoft YaHei", "Helvetica Neue", sans-serif;
-    background: white;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: "Helvetica", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  background: white;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 /*去除点击高亮效果*/
 a, button, input, select, img, label {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: transparent;
-    outline: medium none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: medium none;
 }
 
 input::-moz-focus-inner {
-    border: none;
-    padding: 0;
+  border: none;
+  padding: 0;
 }
 
 select, input {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*去除输入框默认样式*/
 button, input[type="input"] {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /*去除默认样式结束*/
 .main {
-    max-width: 640px;
-    top: 0px;
-    bottom: 48px;
-    position: absolute;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+  max-width: 640px;
+  width: 100%;
+  top: 0px;
+  bottom: 48px;
+  position: absolute;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .userinfo-bottom, .header .userinfo .userinfo-portrait .level {
-    display: block;
-    border: none;
-    padding: 0 7px;
-    height: 16px;
-    line-height: 16px;
-    background: #a6c5f9;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+  display: block;
+  border: none;
+  padding: 0 7px;
+  height: 16px;
+  line-height: 16px;
+  background: #a6c5f9;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 .attention-bottom {
-    display: inline-block;
-    padding: 6px 25px;
-    border: 1px solid #ff6666;
-    color: #ff7373;
+  display: inline-block;
+  padding: 6px 25px;
+  border: 1px solid #ff6666;
+  color: #ff7373;
 }
 
 .header .backdrop {
-    height: 120px;
-    background: url(../image/bg-1.png) no-repeat;
-    background-size: cover;
-    background-position: 0 0;
+  height: 120px;
+  background: url(../image/bg-1.png) no-repeat;
+  background-size: cover;
+  background-position: 0 0;
 }
 .header .userinfo {
-    position: relative;
-    padding: 44px 18px 0 18px;
+  position: relative;
+  padding: 44px 18px 0 18px;
 }
 .header .userinfo .userinfo-portrait {
-    width: 62px;
-    height: 62px;
-    padding: 4px;
-    background: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -31px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+  width: 62px;
+  height: 62px;
+  padding: 4px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -31px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 .header .userinfo .userinfo-portrait .level {
-    position: absolute;
-    bottom: 8px;
-    left: 55%;
-    font-size: 8px;
+  position: absolute;
+  bottom: 8px;
+  left: 55%;
+  font-size: 8px;
 }
 .header .userinfo .userinfo-portrait img {
-    max-width: 100%;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+  max-width: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 .header .userinfo .userinfo-username {
-    font-size: 16px;
-    text-align: center;
-    line-height: 21px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 21px;
 }
 .header .userinfo .userinfo-attention {
-    margin-top: 13px;
-    font-size: 13px;
-    color: red;
-    text-align: center;
+  margin-top: 13px;
+  font-size: 13px;
+  color: red;
+  text-align: center;
 }
 .header .userinfo .userinfo-attention span {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .header .userinfo .userinfo-aphorism {
-    margin-top: 14px;
-    font-size: 14px;
-    color: #666;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #666;
 }
 .header .userinfo .userinfo-other {
-    margin-top: 17px;
-    padding-bottom: 15px;
+  margin-top: 17px;
+  padding-bottom: 15px;
 }
 .header .userinfo .userinfo-other .other-answer {
-    float: left;
-    margin-right: 8px;
+  float: left;
+  margin-right: 8px;
 }
 .header .userinfo .userinfo-other .other-fans {
-    float: left;
+  float: left;
 }
 .header .userinfo .userinfo-other .other-icon {
-    margin-right: 7px;
-    font-size: 10px;
-    display: inline-block;
-    color: #b6b6b6;
-    padding: 3px 9px;
-    border: 1px solid #b6b6b6;
+  margin-right: 7px;
+  font-size: 10px;
+  display: inline-block;
+  color: #b6b6b6;
+  padding: 3px 9px;
+  border: 1px solid #b6b6b6;
 }
 .header .userinfo .userinfo-other .other-number {
-    font-size: 9px;
+  font-size: 9px;
 }
 
 /*最新优惠页面开始*/
 .section .privilege {
-    margin-top: 10px;
-    padding: 12px 18px 17px 18px;
+  margin-top: 10px;
+  padding: 12px 18px 17px 18px;
 }
 .section .privilege .privilege-head {
-    padding-bottom: 9px;
-    border-bottom: 1px dashed #e2e2e2;
-    color: #666;
+  padding-bottom: 9px;
+  border-bottom: 1px dashed #e2e2e2;
+  color: #666;
 }
 .section .privilege .privilege-head .privilege-head-left {
-    font-size: 14px;
-    float: left;
+  font-size: 14px;
+  float: left;
 }
 .section .privilege .privilege-head .privilege-head-left a {
-    color: #666;
+  color: #666;
 }
 .section .privilege .privilege-head .privilege-head-right {
-    font-size: 12px;
-    float: right;
+  font-size: 12px;
+  float: right;
 }
 .section .privilege .privilege-head .privilege-head-right a {
-    color: #8a8a8a;
+  color: #8a8a8a;
 }
 .section .privilege .privilege-main {
-    margin-top: 16px;
-    position: relative;
+  margin-top: 16px;
+  position: relative;
 }
 .section .privilege .privilege-main .privilege-main-picture {
-    width: 55px;
-    height: 55px;
-    float: left;
-    margin-right: 18px;
+  width: 55px;
+  height: 55px;
+  float: left;
+  margin-right: 18px;
 }
 .section .privilege .privilege-main .privilege-main-picture img {
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 .section .privilege .privilege-main .privilege-main-text .privilege-text-top strong {
-    font-size: 13px;
+  font-size: 14px;
 }
 .section .privilege .privilege-main .privilege-main-text .privilege-text-bottom {
-    float: left;
-    font-size: 11px;
-    position: absolute;
-    bottom: 0;
-    left: 72px;
+  float: left;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  left: 72px;
 }
 .section .award {
-    margin-top: 16px;
-    padding: 13px 18px 12px 18px;
-    margin-bottom: 40px;
+  margin-top: 16px;
+  padding: 13px 18px 12px 18px;
+  margin-bottom: 40px;
 }
 .section .award .award-icon {
-    width: 40px;
-    height: 40px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    background: #a6c5f9;
-    font-size: 17px;
-    color: white;
-    line-height: 40px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 15px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: #a6c5f9;
+  font-size: 17px;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
 }
 .section .award .award-message {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .section .award .award-message.change {
-    height: 40px;
-    overflow: hidden;
+  height: 40px;
+  overflow: hidden;
 }
 .section .award .award-message .award-conent li {
-    height: 20px;
-    line-height: 20px;
-    display: inline;
-    font-size: 13px;
-    color: #7f7f7f;
-    word-break: break-all;
+  height: 20px;
+  line-height: 20px;
+  display: inline;
+  font-size: 13px;
+  color: #7f7f7f;
+  word-break: break-all;
 }
 .section .award .award-message .award-conent li .award-number {
-    margin-left: 8px;
-    font-size: 13px;
+  margin-left: 8px;
+  font-size: 13px;
 }
 .section .award .award-next a {
-    display: block;
-    width: 18px;
-    height: 18px;
-    background: url(../image/result.png);
-    background-position: 0px 0px;
-    background-size: 75px 29px;
-    margin: 0 auto;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(../image/result.png);
+  background-position: 0px 0px;
+  background-size: 75px 29px;
+  margin: 0 auto;
 }
 
 /*内容页面开始*/
 .content {
-    margin-top: 18px;
+  margin-top: 18px;
 }
 .content .content-communicate .content-list {
-    margin-top: 17px;
-    padding: 0 18px 14px 18px;
-    border-bottom: 1px solid #eee;
+  margin-top: 17px;
+  padding: 0 18px 14px 18px;
+  border-bottom: 1px solid #eee;
 }
 .content .content-communicate .content-list .content-list-head {
-    height: 31px;
-    margin-bottom: 18px;
+  height: 31px;
+  margin-bottom: 18px;
 }
 .content .content-communicate .content-list .content-list-head .list-left {
-    float: left;
+  float: left;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-portrait {
-    width: 34px;
-    height: 34px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    float: left;
-    margin-right: 12px;
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  float: left;
+  margin-right: 12px;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-portrait img {
-    max-width: 100%;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+  max-width: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-other {
-    float: left;
-    font-size: 11px;
-    color: #999;
+  float: left;
+  font-size: 11px;
+  color: #999;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-other time .list-other-time {
-    font-size: 10px;
+  font-size: 10px;
 }
-.content .content-communicate .content-list .content-list-head .list-left .list-other .list-other-username {
-    display: block;
-    margin-bottom: 2px;
-    color: #8a8a8a;
+.content .content-communicate .content-list .content-list-head .list-left .list-other a {
+  display: block;
+}
+.content .content-communicate .content-list .content-list-head .list-left .list-other a .list-other-username {
+  display: block;
+  margin-bottom: 2px;
+  color: #8a8a8a;
 }
 .content .content-communicate .content-list .content-list-head .list-right {
-    float: right;
-    height: 34px;
-    line-height: 34px;
-    font-size: 11px;
+  float: right;
+  height: 34px;
+  line-height: 34px;
+  font-size: 11px;
 }
 .content .content-communicate .content-list .content-list-head .list-right a {
-    color: #f66;
+  color: #f66;
 }
 .content .content-communicate .content-list .content-title {
-    display: block;
-    font-size: 15px;
-    margin-bottom: 15px;
-    font-weight: normal;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-weight: normal;
 }
 .content .content-communicate .content-list .content-illustration {
-    margin-bottom: 14px;
-    margin: 0 auto;
-    margin-bottom: 13px;
+  margin-bottom: 14px;
+  margin: 0 auto;
+  margin-bottom: 13px;
 }
-.content .content-communicate .content-list .content-illustration img {
-    max-width: 100%;
+.content .content-communicate .content-list .content-illustration a {
+  display: block;
+}
+.content .content-communicate .content-list .content-illustration a img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 .content .content-communicate .content-list .content-response {
-    background: #f7f7f7;
-    padding: 16px 16px 16px 34px;
+  background: #f7f7f7;
+  padding: 16px 16px 16px 34px;
 }
 .content .content-communicate .content-list .content-response .response-head {
-    font-size: 11px;
-    margin-bottom: 12px;
-    color: #aaa;
+  font-size: 11px;
+  margin-bottom: 12px;
+  color: #aaa;
 }
 .content .content-communicate .content-list .content-response .response-head .response-author {
-    float: left;
-    margin-right: 6px;
-    position: relative;
-    color: #929292;
+  float: left;
+  margin-right: 6px;
+  position: relative;
+  color: #929292;
 }
 .content .content-communicate .content-list .content-response .response-head .response-author:before {
-    content: "A";
-    display: block;
-    width: 14px;
-    height: 14px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    text-align: center;
-    line-height: 14px;
-    position: absolute;
-    background: #ffa760;
-    color: white;
-    left: -22px;
-    top: 2px;
+  content: "A";
+  display: block;
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 14px;
+  position: absolute;
+  background: #ffa760;
+  color: white;
+  left: -22px;
+  top: 1px;
 }
 .content .content-communicate .content-list .content-response .response-head .response-time {
-    float: left;
-    font-size: 11px;
-    line-height: 16px;
+  float: left;
+  font-size: 11px;
+  line-height: 16px;
 }
 .content .content-communicate .content-list .content-response .response-main {
-    font-size: 12px;
-    color: #727272;
+  font-size: 13px;
+  color: #727272;
 }
 
 .mask {
-    position: fixed;
-    background: #000;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
-    z-index: 11;
-    display: none;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 11;
+  display: none;
+  width: 100%;
+  height: 100%;
 }
 .mask .close {
-    width: 30px;
-    height: 30px;
-    background: #fff;
-    color: indianred;
-    text-align: center;
-    line-height: 30px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    font-size: 20px;
-    z-index: 12;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  color: indianred;
+  text-align: center;
+  line-height: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 20px;
+  z-index: 12;
 }
 .mask .mask-content {
-    width: 75%;
-    overflow: hidden;
-    float: right;
+  width: 75%;
+  overflow: hidden;
+  float: right;
 }
 .mask .mask-content #ctext {
-    width: 80%;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    float: right;
-    margin-right: 40px;
-    margin-top: 60px;
+  width: 80%;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 60px;
 }
 
 .footer {
-    background: #fff;
-    height: 48px;
-    line-height: 48px;
-    font-size: 14px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background: #fff;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .footer a {
-    display: block;
-    text-align: center;
-    max-width: 640px;
-    color: white;
-    background: #f66;
-    margin: 0 auto;
+  display: block;
+  text-align: center;
+  max-width: 640px;
+  color: white;
+  background: #f66;
+  margin: 0 auto;
 }

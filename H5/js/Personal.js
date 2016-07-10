@@ -40,8 +40,10 @@
     new Judge($(".award-message"),40).init();
 
     //点我提问
-    $("footer a").on("tap",function(){
-        var url=$(this).attr("url"),
+   (function(){
+    //点我提问
+    function appdownload(){
+        var url=$(".footer a").attr("url");
             ua=navigator.userAgent,
             fallbackLink = 'http://www.deyi.com/app/download/index.html?from=appdownload',
             isiOS = /iP(?:ad|hone|od)/i.test(ua),
@@ -69,6 +71,14 @@
                 iframe.src = 'deyiapp://deyi/web?u=http://' + url;
             }
         }
-    });
+
+    }
+    $(".footer a").on("tap",appdownload);
+    $(".list-right a").on("tap",appdownload);
+    $(".attention-bottom").on("tap",appdownload);
+    $(".list-other-username").on("tap",appdownload);
+    $(".list-portrait a").on("tap",appdownload);
+    $(".response-author").on("tap",appdownload);
+})()
 
 })()

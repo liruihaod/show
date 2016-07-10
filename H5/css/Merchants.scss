@@ -102,25 +102,20 @@ button, input[type="input"] {
         }
     }
     .userinfo-username{
-        font-size:16px;
+        font-size:15px;
         text-align:center;
         line-height:21px;
     }
     .userinfo-attention{
         margin-top:13px;
-        font-size:13px;
+        font-size:12px;
         color:red;
         text-align: center;
-        span{
-            position: relative;
-            left:50%;
-            transform:translateX(-50%);
             .attention-bottom{
                 display:inline-block;
                 padding:6px 25px;
                 border:1px solid #ff6666;
                 color:#ff7373;
-            }
         }
     }
     .userinfo-aphorism{
@@ -187,7 +182,10 @@ button, input[type="input"] {
             &:after{
                 @extend .clearfix;
             }
-            .privilege-main-picture{
+           a{
+            display: block;
+             .privilege-main-picture{
+                display:block;
                 width:55px;
                 height:55px;
                 float:left;
@@ -199,17 +197,20 @@ button, input[type="input"] {
                 }
             }
             .privilege-main-text{
+                display:block;
+
                 .privilege-text-top{
                     font-size:14px;
                 }
                 .privilege-text-bottom{
-                    float:left;
+                    display:block;
                     font-size:11px;
                     position: absolute;
                     bottom:0;
                     left:72px;
                 }
             }
+           }
         }
     }
 }
@@ -342,12 +343,12 @@ button, input[type="input"] {
                             background:#ffa760;
                             color:white;
                             left:-22px;
-                            top:2px;
+                            top:1px;
                         }
                     }
                 }
                 .response-main{
-                    font-size:12px;
+                    font-size:13px;
                     color:#727272;
                 }
             }

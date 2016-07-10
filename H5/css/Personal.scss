@@ -208,7 +208,7 @@ button, input[type="input"] {
                 }
                 .privilege-text-top{
                     strong{
-                        font-size:13px;
+                        font-size:14px;
                     }
                 }
                 .privilege-text-bottom{
@@ -307,15 +307,19 @@ button, input[type="input"] {
                         float:left;
                         font-size:11px;
                         color:#999;
+
                         time{
                             .list-other-time{
                                 font-size:10px;
                             }
                         }
-                        .list-other-username{
+                        a{
+                            display:block;
+                            .list-other-username{
                             display: block;
                             margin-bottom:2px;
                             color:#8a8a8a;
+                        }
                         }
                     }
                 }
@@ -340,9 +344,14 @@ button, input[type="input"] {
                 margin-bottom:14px;
                 margin:0 auto;
                 margin-bottom:13px;
-                img{
+               a{
+                display:block;
+                 img{
                     max-width:100%;
+                    width:100%;
+                    height:100%;
                 }
+               }
             }
             .content-response{
                 background:#f7f7f7;
@@ -354,7 +363,7 @@ button, input[type="input"] {
                     &:after{
                         @extend .clearfix;
                     }
-                    .response-author{
+                        .response-author{
                         &:before{
                             content:"A";
                             display: block;
@@ -367,7 +376,7 @@ button, input[type="input"] {
                             background:#ffa760;
                             color:white;
                             left:-22px;
-                            top:2px;
+                            top:1px;
                         }
                         float:left;
                         margin-right:6px;
@@ -382,7 +391,7 @@ button, input[type="input"] {
 
                 }
                 .response-main{
-                    font-size:12px;
+                    font-size:13px;
                     color:#727272;
                 }
             }

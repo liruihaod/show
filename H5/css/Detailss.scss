@@ -99,7 +99,7 @@ button, input[type="input"] {
 }
 .content{
     li{
-        margin-top:14px;
+        padding-top:14px;
         background:white;
         padding:18px;
         .content-list-head{
@@ -139,7 +139,7 @@ button, input[type="input"] {
                     display: block;
                     margin-bottom:2px;
                     color:#666;
-                    font-size:12px;
+                    font-size:13px;
                 }
                 .level{
                     position: absolute;
@@ -174,7 +174,7 @@ button, input[type="input"] {
             display: block;
             background:#f2f7ff;
             padding:15px 20px;
-            font-size:14px;
+            font-size:15px;
             color:#151515;
             margin-bottom:13px;
             font-weight: normal;
@@ -190,24 +190,23 @@ button, input[type="input"] {
             }
         }
         .content-advertisement{
+            display: block;
             padding:14px 14px 17px 5px;
             background:#f3f3f3;
             &:after{
                 @extend .clearfix;
             }
             .content-advertisement-picture{
+                display: block;
                 width:55px;
                 height:55px;
                 float:left;
-                margin-right:11px;
+                margin-right:14px;
                 margin-top:-9px;
-                a{
-                    width:100%;
-                    heigth:100%;
-                    display: block;
                     img{
                         max-width:100%;
-                    }
+                        width:100%;
+                        height:100%;
                 }
 
             }
