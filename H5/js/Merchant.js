@@ -1,6 +1,7 @@
 (function(){
     //点我提问
-    function appdownload(){
+    function appdownload(e){
+        e.preventDefault();
         var url=$(".footer a").attr("url");
             ua=navigator.userAgent,
             fallbackLink = 'http://www.deyi.com/app/download/index.html?from=appdownload',
@@ -33,9 +34,11 @@
     }
     $(".footer a").on("tap",appdownload);
     $(".list-right a").on("tap",appdownload);
-    $(".attention-buttom").on("tap",appdownload);
+    $(".attention-bottom").on("tap",appdownload);
     $(".list-other-username").on("tap",appdownload);
     $(".list-portrait a").on("tap",appdownload);
     $(".list-other-username").on("tap",appdownload);
+    $(".other-icon").on("tap",appdownload);
+    $(".privilege-main").on("tap",appdownload);
 
 })()

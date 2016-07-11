@@ -292,6 +292,8 @@ button, input[type="input"] {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
+  width:100%;
+  height:100%;
 }
 .content .content-communicate .content-list .content-list-head .list-left .list-other {
   float: left;

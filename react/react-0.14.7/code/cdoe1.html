@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+        <div id="zone"></div>
+
+        <script type="text/babel">
+            var Names=React.createClass({
+                render:function(){
+                    return <h1>Hello {this.props.name}</h1>;
+                }
+            });
+            ReactDOM.render(
+                    <Names name="Acorn"/>,
+                    document.getElementById('zone')
+            )
+
+
+        </script>
+</body>
+</html>

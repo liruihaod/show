@@ -1,0 +1,111 @@
+问题详情
+{
+    "code": "200",
+    "data": {
+        "list": [
+            {
+                "pid": "9", //回帖ID
+                "author": "dy6", //作者
+                "dateline": "1467271760", //时间
+                "level": "Lv8", //等级
+                "attaches": [ //具体内容
+                    {
+                        "type": "0", //文本
+                        "path": { //内容
+                            "content": "有木有优惠的说？=.="
+                        }
+                    },
+                     {
+                        "type": "3", //优惠活动
+                        "path": {
+                            "content": "http:\/\/img.dy.leeon.me\/group1\/M00\/00\/0B\/CgASf1dx3yyAVb-7AADpGBhazBY275.png",
+                            "title": "10年大酬宾啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
+                            "jumpto": {
+                                "code": 34,
+                                "attr": "1"
+                            }
+                        }
+                    }
+                ],
+                "avatar": "http:\/\/img.dy.leeon.me\/ucenter\/data\/avatar\/000\/01\/09\/13_avatar_small.jpg", //头像
+                "jumpto": { //点击头像跳转
+                    "code": 8,
+                    "attr": "10913"
+                },
+                "subscribe": 0 //是否显示订阅用户 0:不显示 1:显示
+            },
+            {
+                "pid": "10",
+                "author": "dy1",
+                "dateline": "1467272760",
+                "level": "Lv1",
+                "attaches": [
+                    {
+                        "type": "2", //音频
+                        "path": {
+                            "content": "http:\/\/www.w3school.com.cn\/i\/horse.ogg",
+                            "seconds": "2"
+                        }
+                    }
+                ],
+                "avatar": "http:\/\/img.dy.leeon.me\/ucenter\/data\/avatar\/000\/01\/09\/08_avatar_small.jpg",
+                "jumpto": {
+                    "code": 8,
+                    "attr": "10908"
+                },
+                "subscribe": 1
+            }
+        ],
+        "agreed": "999+", //有帮助总数
+        "flag": "1", //0:显示 "我要提问" 1:显示追问
+        "tid": "6", //主题贴ID
+        "nextpage": "2" //下一页
+    },
+    "msg": "ok"
+}
+
+优惠详情
+{
+  "code": "200",
+  "data": {
+    "list": [
+      {
+        "id": "3", //优惠信息id
+        "title": "啦啦啦德玛西亚噜噜u...", // 标题
+        "img": "", //图片
+        "dateline": "2016-07-06" //时间
+      },
+      {
+        "id": "1",
+        "title": "10年大酬宾啊啊啊啊啊啊啊啊啊...",
+        "img": "http://img.dy.leeon.me/group1/M00/00/0B/CgASf1dt88-ABbVxAAIW0n896Ko702.jpg",
+        "dateline": "2016-06-23"
+      },
+      {
+        "id": "2",
+        "title": "9999999年大酬宾啊啊啊啊...",
+        "img": "http://img.dy.leeon.me/group1/M00/00/0B/CgASf1dt88-ABbVxAAIW0n896Ko702.jpg",
+        "dateline": "2016-04-26"
+      }
+    ],
+    "nextpage": "0"
+  },
+  "msg": "ok"
+}
+
+
+优惠列表页
+{
+  "code": "200",
+  "data": {
+    "dateline": "2016-06-23",　//时间
+    "message": "10年大酬宾啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊", // 优惠内容
+    "pics": [ // 图片地址，数组形式，如果为空则为空数组
+      "http://img.dy.leeon.me/group1/M00/00/0B/CgASf1dt88-ABbVxAAIW0n896Ko702.jpg",
+      "http://img.dy.leeon.me/group1/M00/00/0B/CgASf1dzO3SAZOqIAASLhwZyVXY015.png"
+    ]
+  },
+  "msg": "ok"
+}
+
+

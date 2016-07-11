@@ -36,6 +36,8 @@
     $(".attention-button").on("tap",appdownload);
     $(".list-other-username").on("tap",appdownload);
     $(".content-illustration").on("tap",appdownload);
+    $(".list-portrait").on("tap",appdownload);
+
 
     //播放音乐
     $(".content-voice").on("tap",function(){
@@ -54,4 +56,7 @@
         }
 
     })
+
+    //页面懒加载分页数据
+
 })()
