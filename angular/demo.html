@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="angular-1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="zone" ng-controller="xixi">
+
+<button ng-click="myClick()">按钮</button>
+<h1 ng-if="!flag">三大赵日天</h1>
+<input type="text" ng-focus="call()" ng-blur="play()" ng-model="name">
+<h2 ng-bind="name"></h2>
+<ul ng-repeat="x in recode">
+    <li>我的名字是{{x.name}}</li>
+    <li>我的年龄是{{x.age}}</li>
+</ul>
+
+<div ng-controller="next">
+<button ng-click="go()">点击</button>
+</div>
+</body>
+<script>
+     var app=angular.module("zone",[]);
+         app.controller("xixi",function($scope){
+             $scope.name="zone";
+             $scope.flag=false;
+             $scope.call=function(){
+                 document.getElementsByTagName("h1")[0].style.color="red";
+             };
+             $scope.play=function(){
+                 document.getElementsByTagName("h1")[0].style.color="black";
+             };
+             $scope.recode=[
+                 {
+                     "name":"赵日天",
+                     "age":18
+                 },
+                 {
+                     "name":"李斩仙",
+                     "age":19
+                 },{
+                     "name":"大脸怪",
+                     "age":20
+                 }
+             ];
+             $scope.myClick=function(){
+                 console.log($scope.flag);
+                 $scope.flag=!$scope.flag;
+                 console.log($scope.flag);
+             };
+         })
+         app.controller("next",function($scope){
+             $scope.names="7.12code"
+             $scope.go=function(){
+                 console.log($scope.name+$scope.names)
+             }
+         })
+</script>
+</html>
