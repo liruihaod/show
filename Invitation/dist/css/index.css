@@ -1,0 +1,111 @@
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+  max-width: 640px;
+  margin: 0 auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body, section {
+  height: 100%;
+  width: 100%; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+li {
+  list-style: none; }
+
+body {
+  background: url(../image/bg-1.png) no-repeat;
+  backgrdound-size: cover; }
+
+#header {
+  padding: 13px 6px 12px 16px;
+  background: #fff; }
+  #header .prev {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../image/result.png) no-repeat;
+    background-position: -23px 1px;
+    background-size: 75px 29px; }
+  #header .main {
+    margin-left: 41px;
+    color: #151515;
+    font-size: 15px;
+    font-weight: normal; }
+
+#section {
+  background-size: cover;
+  padding: 34px 21px 37px 20px; }
+  #section .content {
+    padding: 0 25px; }
+    #section .content .content-top {
+      padding-top: 43px;
+      padding-bottom: 35px; }
+      #section .content .content-top .invite-number {
+        font-size: 24px;
+        color: #ec3031;
+        margin-bottom: 14px;
+        font-weight: normal;
+        display: block;
+        text-align: center; }
+      #section .content .content-top .invite-user {
+        font-size: 13px;
+        color: #ec3031;
+        display: block;
+        text-align: center; }
+      #section .content .content-top .invite-copy {
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        font-szie: 15px;
+        color: #fff;
+        background: #ec3031; }
+    #section .content .interval {
+      position: relative;
+      background: url('data:image/svg+xml;utf8,<svg width="10" height="10" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="red" kerning="5"/> </svg>'); }
+      #section .content .interval:before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 28px;
+        border-radius: 0 14px 14px 0;
+        position: absolute; }
+      #section .content .interval:after {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 28px;
+        border-radius: 14px 0 0 14px;
+        position: absolute; }
+    #section .content .content-bottom {
+      padding-top: 40px; }
+      #section .content .content-bottom .question {
+        font-size: 17px;
+        color: #1c1c1c;
+        display: block;
+        text-align: center; }
+      #section .content .content-bottom .response {
+        margin-top: 17px; }
+        #section .content .content-bottom .response .response-list {
+          font-size: 11px;
+          text-align: center;
+          margin-bottom: 9px;
+          color: #898888; }
+
+#footer {
+  height: 49px;
+  line-height: 49px;
+  background: #ec3031; }
+  #footer .download {
+    font-size: 15px;
+    color: #fff;
+    display: block;
+    text-align: center; }
