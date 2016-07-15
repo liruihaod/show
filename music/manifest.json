@@ -1,0 +1,19 @@
+
+
+  // 开发参考：http://open.chrome.360.cn/extension_dev/overview.html
+  // 字段说明参考：http://open.chrome.360.cn/extension_dev/manifest.html
+  {
+   "name": "Music Player", // 必填
+    "version": "1.0", // 必填
+   "description": "音乐播放器,采用豆瓣后台API",
+   "permissions": ["webRequest", "webRequestBlocking", "tabs", "<all_urls>"],
+
+  "browser_action": {
+      "default_title": "三大赵日天的每天日常",
+       "default_icon": "eye.jpg"
+   },
+   "background": {
+    "scripts": ["background.js"]
+  },
+   "manifest_version": 2 // 必填 没有会报错：The 'manifest_version' key must be present and set to 2 (without quotes). See developer.chrome.com/extensions/manifestVersion.html for details.
+ }
