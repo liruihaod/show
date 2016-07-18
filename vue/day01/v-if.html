@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+<div class="zone">
+<p v-if="status">
+{{x|capitalize}}
+</p>
+<input type="text" name="name" v-model="message">
+</div>
+</body>
+<script type="text/javascript">
+ new Vue({
+   el:".zone",
+   data:{
+     message:"<h1>我是赵日天</h1>",
+     x:"liruihaod",
+     status:true
+   }
+ })
+</script>
+</html>

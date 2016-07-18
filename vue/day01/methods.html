@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="../vue.js">
+
+  </script>
+</head>
+<body>
+<div id="app">
+  <h1>{{message}}</h1>
+  <input type="text" name="name" placeholder="请输入你想说的话" v-model="newData" v-on:keyup.enter="zone()">
+  <br>
+  <ul>
+    <li v-for="x in todo">
+      {{x.text}}
+      <button type="button" name="button" v-on:click="removetodos($index)">X</button>
+      <br>
+    </li>
+  </ul>
+</div>
+</body>
+<script type="text/javascript">
+   new Vue({
+     el:"#app",
+     data:{
+            newData:"",
+       message:"hello world",
+
+     todo:[{
+       text:"三大赵日天"
+     }]
+   },
+     methods:{
+       zone:function(){
+          var text=this.newData.trim();
+          if(text){
+            this.todo.push({text:text});
+            this.newData="";
+          }
+       },
+     removetodos:function(index){
+       this.todo.splice(index,1);
+     }
+   }
+   })
+</script>
+</html>
