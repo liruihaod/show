@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{a}}
+    <br>
+    <br>
+    <input type="text" v-model="name">
+    <br>
+    <br>
+    <input type="number" v-model="age">
+</div>
+</body>
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            a:"",
+            name:"三大赵日天",
+            age:18
+    },
+        computed:{
+            a:function(){
+                return this.name+""+this.age;
+            }
+        }
+    })
+</script>
+</html>

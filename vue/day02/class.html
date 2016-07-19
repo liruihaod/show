@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+
+        .xixi{
+            color:green;
+        }
+        .wrap{
+            color:red;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="zone">
+    <p class="zone" :style="styleCt" >{{name}}</p>
+    <ul>
+        <li v-for="x in 10" @click="b">
+            {{x}}
+        </li>
+    </ul>
+    <input   v-on:keyup.enter="d">
+</div>
+<div class="ct">
+    <template v-if="no">
+        <h1 >{{"三大赵日天1"}}</h1>
+    <h1 >{{"三大赵日天2"}}</h1>
+    <h1 >{{"三大赵日天3"}}</h1>
+    <h1 >{{"三大赵日天4"}}</h1>
+    </template>
+    <h1 v-else>{{"zonce"}}</h1>
+</div>
+
+</body>
+<script>
+    var vm=new Vue({
+        el:"#zone",
+        data:{
+            isA:"wrap",
+            isB:true,
+            name:"三大赵日天",
+            todo:[{
+                text:"测试西"
+            },{
+                text:"思想",
+            },{                text:"asdad"}],
+            styleCt:{
+                color:"red",
+                fontSize:"20px",
+                fontWeight:"700px",
+                textShadow:"0 0 2px black"
+            }
+        },
+        methods:{
+            b:function(){
+                console.log("赵日天");
+            },
+            d:function(){
+                console.log("大丈夫,萌大奶")
+            }
+        }
+    })
+    var vv=new Vue({
+        el:".ct",
+        data:{
+            no:true
+        }
+    })
+</script>
+</html>

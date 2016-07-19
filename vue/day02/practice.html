@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div class="zone" >
+   <p v-if="key"> {{(x>222  )?"三大赵日天":"阿童木"}}</p>
+</div>
+</body>
+<script>
+    new Vue({
+        el:".zone",
+        data:{
+            replace:true,
+            message:"三大赵日天",
+            key:true,
+            x:5
+        }
+
+    })
+</script>
+</html>

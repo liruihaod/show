@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div class="zone">
+    <h2>输入的内容是:{{acorn}}</h2>
+    <input type="text" v-model="acorn">
+</div>
+</body>
+<script>
+     var vm=new Vue({
+         el:".zone",
+         data:{
+             acorn:""
+         }
+     })
+</script>
+</html>

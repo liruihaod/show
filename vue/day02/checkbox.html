@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div class="zone">
+<input type="checkbox" id="checkbox" value="checkbox" v-model="checked">
+<label for="checkbox">checkbox</label>
+    <input type="checkbox" id="mark" value="mark" v-model="checked">
+    <label for="mark">mark</label>
+    <input type="checkbox" id="disited" value="disited" v-model="checked">
+    <label for="disited">disited</label>
+    <br>
+    <br>
+    <span>所选的类别是{{checked|json}}</span>
+</div>
+</body>
+<script>
+    var vm=new Vue({
+        el:".zone",
+        data:{
+            checked:[]
+        }
+    })
+</script>
+</html>

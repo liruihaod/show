@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="zone">
+    <select name="" id="" v-model="select">
+        <option value="a" selected>A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+    </select>
+    <h2>选择的内容是:{{select}}</h2>
+</div>
+
+<div class="wrap"></div>
+</body>
+<script>
+    var vm=new Vue({
+        el:"#zone",
+        data:{
+        }
+    })
+</script>
+</html>
