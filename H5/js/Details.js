@@ -40,22 +40,24 @@
 
 
     //播放音乐
-    $(".content-voice").on("tap",function(){
-        var audioSrc=$(".content-voice .frame").attr("audio-src");
-        if(!$(this).data("key")){
-            $(this).data("key",true)
-            console.log("播放音乐");
-            if(!$(".content-voice .frame").attr("src")){
-                $(".content-voice .frame").attr("src",audioSrc);
-            }
-            $(".content-voice .frame")[0].play();
-        }else{
-            $(this).data("key",false);
-            $(".content-voice .frame")[0].pause();
-            console.log("停止播放")
+    $(".content").on("tap",".content-voice", function () {
+    var tem=$(this).index(),
+    children=$(this).children(".frame"),
+     audioSrc = children.attr("audio-src");
+    children.attr("src",audioSrc);
+    if(children.data("key")){
+        children[0].pause();
+        children.data("key",false);
+    }else{
+      children.data("key",true);
+        for(var i=0;i<$(".content-voice").children(".frame").size();i++){
+            $(".content-voice").children(".frame")[i].pause();
         }
+        children[0].play();
+    }
+});
 
-    })
+
 
     //页面懒加载分页数据
 
