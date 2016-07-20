@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="zone">
+    <div><acorn></acorn></div>
+</div>
+</body>
+<script>
+//定义
+    var acorn=Vue.extend({
+        template:'<h1>hello world</h1>'
+    })
+//注册
+    Vue.component("acorn",acorn);
+    //创建实例根
+    new Vue({
+        el:"#zone"
+    })
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="zone">
+        <input type="text" v-model="aameg">
+        <br>
+<acorn :set="aameg"></acorn>
+    </div>
+</body>
+<script>
+
+
+    Vue.component("acorn",{
+        props:['set'],
+        template:"<span>{{set}}<span>"
+    })
+    new Vue({
+        el:"#zone",
+        data:{
+            aameg:"请输入你要输入的话"
+        }
+    })
+</script>
+</html>
