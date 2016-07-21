@@ -1,50 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="../vue.js"></script>
-    <style>
-        ul {
-            padding-left: 0;
-            font-family: Helvetica, Arial, sans-serif;
-        }
-        .staggered-transition {
-            transition: all .5s ease;
-            overflow: hidden;
-            margin: 0;
-            height: 20px;
-        }
-        .staggered-enter, .staggered-leave {
-            opacity: 0;
-            height: 0;
-        }
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="../vue.js"></script>
+  <style media="screen">
 
-    </style>
+    .stagged-transition{
+      transition:all .5s ease;
+      overflow:hidden;
+      margin:0;
+      height:20px;
+      line-height: 20px;
+      color:red;
+    }
+    .stagged-enter,.stagged-leave{
+      opacity:0;
+      height:0;
+    }
+  </style>
 </head>
 <body>
-<div id="demo">
-    <input v-model="query">
-    <ul>
-        <li v-for="item in list | filterBy query" transition="staggered" >
-            {{item.msg}}
-        </li>
-    </ul>
+<div class="zone">
+  <input type="text" v-model="query">
+  <ul>
+    <li v-for="x in todo|filterBy query" transition="stagged">{{x.text}}</li>
+  </ul>
 </div>
 </body>
-<script>
-    new Vue({
-        el: '#demo',
-        data: {
-            query: '',
-            list: [
-                { msg: 'Bruce Lee' },
-                { msg: 'Jackie Chan' },
-                { msg: 'Chuck Norris' },
-                { msg: 'Jet Li' },
-                { msg: 'Kung Fury' }
-            ]
-        }
-    })
+<script type="text/javascript">
+  var vm=new Vue({
+    el:".zone",
+    data:{
+      query:"",
+      todo:[
+        {text:"zone"},
+        {text:"acorn"},
+        {text:"zzzz"},
+        {text:"memeda"},
+        {text:"hahaha"},
+        {text:"madandasd"}
+      ]
+    }
+  })
 </script>
 </html>
