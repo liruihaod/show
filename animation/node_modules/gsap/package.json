@@ -1,0 +1,62 @@
+{
+  "name": "gsap",
+  "filename": "TweenMax.min.js",
+  "version": "1.19.0",
+  "description": "Think of GSAP as the Swiss Army Knife of animation...but better. It animates anything JavaScript can touch (CSS properties, canvas library objects, SVG, generic objects, whatever) and it solves countless browser inconsistencies, all with blazing speed (up",
+  "homepage": "http://greensock.com/gsap/",
+  "main": "./src/uncompressed/TweenMax.js",
+  "keywords": [
+    "animation",
+    "TweenLite",
+    "TweenMax",
+    "TimelineLite",
+    "TimelineMax",
+    "GSAP",
+    "GreenSock",
+    "easing",
+    "EasePack",
+    "jQuery",
+    "jquery.gsap.js",
+    "Bezier",
+    "SVG",
+    "3D",
+    "2D",
+    "transform",
+    "tweening"
+  ],
+  "maintainers": [
+    {
+      "name": "greensock",
+      "email": "info@greensock.com"
+    }
+  ],
+  "license": "Standard 'no charge' license: http://greensock.com/standard-license. Club GreenSock members get more: http://greensock.com/licensing/. Why GreenSock doesn't employ an MIT license: http://greensock.com/why-license/",
+  "bugs": {
+    "url": "http://greensock.com/forums/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greensock/GreenSock-JS.git"
+  },
+  "gitHead": "94c5d3100f78656c3a336ff1080ce22fba63394d",
+  "_id": "gsap@1.19.0",
+  "scripts": {},
+  "_shasum": "f36b78c6b1a449028d89efbb4c161db29f5991dd",
+  "_from": "gsap@latest",
+  "_npmVersion": "3.10.5",
+  "_nodeVersion": "4.4.7",
+  "_npmUser": {
+    "name": "greensock",
+    "email": "info@greensock.com"
+  },
+  "dist": {
+    "shasum": "f36b78c6b1a449028d89efbb4c161db29f5991dd",
+    "tarball": "https://registry.npmjs.org/gsap/-/gsap-1.19.0.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/gsap-1.19.0.tgz_1468881865604_0.09707566839642823"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/gsap/-/gsap-1.19.0.tgz"
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #zone{
+            background:linear-gradient(-45deg,rgba(220,161,83,.5), rgba(217,157,97,.5)25%,rgba(217,157,97,.5)25%, rgba(155,139,100,.5)40%,rgba(155,139,100,.5)40%, rgba(35,44,73,.5)75%,rgba(35,44,73,.5)75%, rgba(11,10,43,.5));
+        }
+    </style>
+</head>
+<body>
+    <canvas id="zone"></canvas>
+</body>
+<script src="../easeljs-0.8.2.min.js"></script>
+<button class="btn">play</button>
+<script>
+    var  stage=new createjs.Stage("zone"),
+            image=new createjs.Bitmap("bg1.png");
+            text=new createjs.Text("hello world");
+    text.setTransform(100, 100)
+    stage.addChild(text,image);
+    stage.update();
+    text.addEventListener("click",function(){
+    })
+   document.querySelector(".btn").addEventListener("click",function(){
+       createjs.Ticker.addEventListener("tick", function(event){
+           image.x += 10;
+           stage.update();
+           if(image.x>=400){
+               image.x=0;
+           }
+       });
+   })
+
+</script>
+</html>

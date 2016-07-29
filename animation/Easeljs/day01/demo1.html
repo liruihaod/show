@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个简单的例子</title>
+    <style>
+        .wrap{
+            width:400px;
+            height:400px;
+            margin:100px auto;
+        }
+        #zone{
+            width:400px;
+            height:400px;
+            background:linear-gradient(-45deg,rgba(220,161,83,.5), rgba(217,157,97,.5)25%,rgba(217,157,97,.5)25%, rgba(155,139,100,.5)40%,rgba(155,139,100,.5)40%, rgba(35,44,73,.5)75%,rgba(35,44,73,.5)75%, rgba(11,10,43,.5));
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <canvas id="zone"></canvas>
+</div>
+
+</body>
+<script src="../easeljs-0.8.2.min.js"></script>
+<script>
+    // 第一个小例子
+    var stage = new createjs.Stage("zone");/*选择舞台的(id)*/
+    var text=new createjs.Text("hello world","20px Arial","red");
+    text.x=100;
+    text.y=10;
+    stage.addChild(text);
+    stage.update();
+</script>
+</html>
